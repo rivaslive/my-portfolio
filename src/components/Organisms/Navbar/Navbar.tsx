@@ -1,9 +1,9 @@
 import { NavbarNav, NavbarWrapper } from './style';
 import MenuNav from 'components/Molecules/MenuNav';
-import {CloseButton, MenuModal} from 'components/Molecules/MenuNav/style';
-import {CloseCircleOutlined} from '@ant-design/icons';
+import { CloseButton, MenuModal } from 'components/Molecules/MenuNav/style';
+import { CloseCircleOutlined } from '@ant-design/icons';
 import useModal from 'hooks/useModal';
-import {Menu} from 'components/Molecules/MenuNav/MenuNav';
+import { Menu } from 'components/Molecules/MenuNav/MenuNav';
 
 type NavbarProps = BaseComponent & {
   isScrolling?: boolean;

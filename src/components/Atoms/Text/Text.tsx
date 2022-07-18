@@ -15,15 +15,15 @@ type TextProps = BaseComponent & {
   lineHeight?: string;
   color?: ColorType;
   align?: AlignType;
-  htmlTag?: 'p' | 'span' | 'div';
+  htmlTag?: 'p' | 'span' | 'div' | 'li';
   mobileSettings?: {
-    fontSize: string;
-    lineHeight: string;
-    textTransform: TextTransformType;
-    letterSpacing: string;
-    fontWeight: FontWeightType;
-    textAlign: AlignType;
-    fontStyle: FontStyleType;
+    fontSize?: string;
+    lineHeight?: string;
+    textTransform?: TextTransformType;
+    letterSpacing?: string;
+    fontWeight?: FontWeightType;
+    textAlign?: AlignType;
+    fontStyle?: FontStyleType;
   };
 };
 
@@ -33,9 +33,9 @@ const Text = ({
   fontStyle = 'normal',
   htmlTag = 'p',
   letterSpacing = '-0.002em',
-  fontWeight = 'bold',
+  fontWeight = 'normal',
   textTransform = 'none',
-  margin = 'inherit',
+  margin = 'initial',
   fontSize = '1rem',
   lineHeight = '1.5',
   color = 'text',

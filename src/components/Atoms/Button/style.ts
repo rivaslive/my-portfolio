@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { ColorType } from 'styles/theme';
 
-export type VariantType = 'default' | 'link';
+export type VariantType = 'default' | 'link' | 'icon';
 
 type ButtonProps = {
   $variant: VariantType;
@@ -25,10 +25,17 @@ const cssDisabled = css`
 `;
 
 const cssVariants = {
-  default: css``,
+  default: css`
+    min-width: 12rem;
+  `,
   link: css`
     min-width: min-content;
     padding: 0 6px;
+  `,
+  icon: css`
+    min-width: 2.5rem;
+    padding: 0 6px;
+    font-size: 18px;
   `,
 };
 
@@ -39,9 +46,8 @@ export const ButtonStyle = styled.button<ButtonProps>`
   height: 2.5rem;
   font-size: 0.875rem;
   line-height: 2.5rem;
-  min-width: 12rem;
-  padding: 0 0.875rem;
   display: flex;
+  padding: 0 0.875rem;
   align-items: center;
   justify-content: center;
   user-select: none;

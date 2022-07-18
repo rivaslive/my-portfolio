@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { MenuOutlined } from '@ant-design/icons';
+
 import Brand from 'components/Atoms/Brand';
+import Button from 'components/Atoms/Button';
+import { useAppTheme } from 'context/AppTheme';
+import { MoonIcon, SunIcon } from 'components/Atoms/icons';
 import {
   StyleMenuNav,
   StyleLink,
@@ -14,15 +18,14 @@ type MenuNavProps = BaseComponent & {
 };
 
 export const Menu = (props: BaseComponent) => {
+  const { themeToggle, theme } = useAppTheme();
+
   return (
     <StyleMenuNav {...props}>
       <StyleBrand fontSize="2.2rem" className="brand-top" />
 
-      <Link href="#home" passHref>
+      <Link href="/" passHref>
         <StyleLink>Home</StyleLink>
-      </Link>
-      <Link href="#who-we-are" passHref>
-        <StyleLink>Who We Are</StyleLink>
       </Link>
       <Link href="#tech" passHref>
         <StyleLink>Technologies</StyleLink>
@@ -31,14 +34,22 @@ export const Menu = (props: BaseComponent) => {
       <StyleBrand className="brand-center" />
 
       <Link href="#experience" passHref>
-        <StyleLink>Experiences</StyleLink>
+        <StyleLink>Experience</StyleLink>
       </Link>
       <Link href="#contact" passHref>
-        <StyleLink className="contact-me">Contact</StyleLink>
+        <StyleLink color="white" className="contact-me">
+          Contact
+        </StyleLink>
       </Link>
-      <Link href="#education" passHref>
-        <StyleLink>Education</StyleLink>
-      </Link>
+
+      <Button
+        color="text"
+        variant="icon"
+        onClick={themeToggle}
+        bgColor="transparent"
+      >
+        {theme === 'light' ? <MoonIcon /> : <SunIcon />}
+      </Button>
     </StyleMenuNav>
   );
 };
@@ -52,6 +63,7 @@ const MenuNav = ({ onToggle, ...props }: MenuNavProps) => {
 
       <MenuBurger
         onClick={onToggle}
+        variant="icon"
         className="only-mobile"
         bgColor="accentOpacity"
       >

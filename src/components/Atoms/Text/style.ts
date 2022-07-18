@@ -12,13 +12,13 @@ type TextProps = {
   $color: ColorType;
   $textAlign: AlignType;
   $mobileSettings?: {
-    fontSize: string;
-    lineHeight: string;
-    textTransform: TextTransformType;
-    letterSpacing: string;
-    fontWeight: FontWeightType;
-    textAlign: AlignType;
-    fontStyle: FontStyleType;
+    fontSize?: string;
+    lineHeight?: string;
+    textTransform?: TextTransformType;
+    letterSpacing?: string;
+    fontWeight?: FontWeightType;
+    textAlign?: AlignType;
+    fontStyle?: FontStyleType;
   };
 };
 

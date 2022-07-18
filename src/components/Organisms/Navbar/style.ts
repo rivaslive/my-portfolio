@@ -18,7 +18,7 @@ export const NavbarWrapper = styled(Container)<{ $isScrolling?: boolean }>`
   padding: 12px 15px;
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
-  max-width: calc(100% - 30px);
+  width: calc(100% - 30px);
   z-index: ${({ theme }) => theme.zIndex.nav};
 
   ${({ $isScrolling }) => $isScrolling && cssScrolling};

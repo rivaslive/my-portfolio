@@ -23,6 +23,7 @@
       "utils/*": ["utils/*"],
       "config/*": ["config/*"],
       "context/*": ["context/*"],
+      "@public/*": ["../public/*"],
     },
     "typeRoots": ["node_modules/@types","@types"]
   },

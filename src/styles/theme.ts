@@ -12,6 +12,7 @@ const colorsLight = {
   background: '#ffffff',
   bgCard: 'rgba(100, 100, 200, .2)',
   text: '#000000',
+  secondaryText: '#404040',
   nav: 'rgba(255, 255, 255, 0.8)',
   modal: 'rgba(0, 0, 0, 0.1)',
   bgModal: 'white',
@@ -21,14 +22,15 @@ const colorsLight = {
   icon: '#BBBBBB',
   primaryOpacity: '#075dc0',
   accentOpacity: '#5b2464',
-  primaryGradient: 'linear-gradient(to right, #1e40af, #2563eb)',
-  accentGradient: 'linear-gradient(to right, #5b2464, #9c27b0)'
+  primaryGradient: 'linear-gradient(to right, #1e40af, #00a2ff)',
+  accentGradient: 'linear-gradient(to right, #762f82, #da00ff)'
 };
 
 const colorsDark = {
   ...colorsLight,
-  background: '#140514',
+  background: '#0F0F1A',
   text: '#ffffff',
+  secondaryText: '#bfc0c0',
   bgCard: 'rgba(100, 100, 200, 0.3)',
   nav: 'rgba(0, 0, 0, .5)',
   bgModal: '#161616',

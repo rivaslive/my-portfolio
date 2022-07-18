@@ -24,7 +24,7 @@ const AppThemeContext = createContext<AppThemeContextType>({
 const KEY_THEME_NAME = 'theme';
 
 export const AppThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<ModeType>('light');
+  const [theme, setTheme] = useState<ModeType>('dark');
 
   const setMode = useCallback((mode: ModeType) => {
     storage.setItem(KEY_THEME_NAME, mode);

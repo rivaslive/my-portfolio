@@ -1,15 +1,24 @@
-import {
-  BannerBottomContent,
-  BannerContent,
-  BannerWrapper,
-  StyleImage
-} from 'components/Organisms/Banner/style';
+import Lottie from 'lottie-react';
 import Title from 'components/Atoms/Title';
-import Image from 'components/Atoms/Image';
 import { Col } from 'components/Atoms/Grid';
 import Text from 'components/Atoms/Text';
 import Button from 'components/Atoms/Button';
 import Input from 'components/Atoms/Input';
+
+import animation from '../../../../public/animations/animation4.json';
+
+const options = {
+  animationData: animation,
+  loop: true,
+  style: {
+    height: '100%'
+  }
+};
+import {
+  BannerBottomContent,
+  BannerContent,
+  BannerWrapper,
+} from './style';
 
 const Banner = (props: BaseComponent) => {
   return (
@@ -19,6 +28,7 @@ const Banner = (props: BaseComponent) => {
           htmlTag="h1"
           align="center"
           fontWeight={800}
+          lineHeight="3rem"
           textTransform="uppercase"
         >
           Kevin{' '}
@@ -51,26 +61,35 @@ const Banner = (props: BaseComponent) => {
           Engineer
         </Title>
 
-        <BannerBottomContent>
+        <BannerBottomContent align="middle" style={{ paddingBottom: '7rem' }}>
           <Col xs={24} lg={12}>
-            <StyleImage src="/my-present.png" />
+            <Lottie {...options} />
           </Col>
 
           <Col xs={24} lg={12}>
             <BannerBottomContent gutter={20}>
               <Col sm={24} md={12}>
-                <Text fontSize="1.5rem">Contactame para poder darte mi informacion perro</Text>
+                <Text
+                  fontSize="1.7rem"
+                  mobileSettings={{ textAlign: 'center' }}
+                >
+                  Start project with me, enter your email to communicate with
+                  you.
+                </Text>
               </Col>
 
-              <Col sm={24} md={12}>
-                <Input placeholder="Your email" />
+              <Col sm={24} md={12} style={{ margin: '0 auto' }}>
+                <Text fontSize="1rem" color="secondaryText" margin="0 0 10px">
+                  Enter your email address
+                </Text>
+                <Input placeholder="example@mail.com" />
                 <Button
                   style={{
                     width: '100%',
                     marginTop: '1rem'
                   }}
                 >
-                  Suscribirse
+                  Start Project
                 </Button>
               </Col>
             </BannerBottomContent>

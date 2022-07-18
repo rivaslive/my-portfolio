@@ -54,10 +54,11 @@ export const StyleLink = styled.a`
   }
 
   &.contact-me {
+    color: white;
     background: ${({ theme }) => theme.colors.accentOpacity};
 
     &:hover {
-      color: ${({ theme }) => theme.colors.text};
+      color: white;
       opacity: 0.8;
     }
   }
