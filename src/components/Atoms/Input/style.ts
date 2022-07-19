@@ -53,6 +53,7 @@ export const StyleInput = styled.input`
   min-width: 0;
   appearance: none;
   padding: 0.25rem 0.625rem;
+  font-family: inherit;
 `;
 
 export const StyleButtonSearch = styled(Button)`

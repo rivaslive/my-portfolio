@@ -14,6 +14,8 @@ const HomeTemplate = (props: BaseComponent) => {
       <Experiences id="experience" />
       <Projects />
       <Contact id="contact" />
+
+      <div style={{ height: 200 }} />
     </main>
   );
 };

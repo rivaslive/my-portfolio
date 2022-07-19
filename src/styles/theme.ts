@@ -18,7 +18,7 @@ const colorsLight = {
   bgModal: 'white',
   input: '#F5F5F5',
   borderColor: '#F5F5F5',
-  shadowInput: 'rgb(224, 224, 224)',
+  shadowInput: 'rgb(178,178,178)',
   icon: '#BBBBBB',
   primaryOpacity: '#075dc0',
   accentOpacity: '#5b2464',
