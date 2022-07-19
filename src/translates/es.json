@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "technologies": "Tecnologías",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "software": "Software",
+  "engineer": "Ingeniero de"
+}

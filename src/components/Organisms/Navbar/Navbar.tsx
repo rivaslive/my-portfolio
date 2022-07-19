@@ -1,29 +1,52 @@
-import { NavbarNav, NavbarWrapper } from './style';
-import MenuNav from 'components/Molecules/MenuNav';
-import { CloseButton, MenuModal } from 'components/Molecules/MenuNav/style';
+import { useCycle } from 'framer-motion';
 import { CloseCircleOutlined } from '@ant-design/icons';
-import useModal from 'hooks/useModal';
+
+import MenuNav from 'components/Molecules/MenuNav';
 import { Menu } from 'components/Molecules/MenuNav/MenuNav';
+import {
+  CloseButton,
+  MenuModal,
+  MenuModalNav
+} from 'components/Molecules/MenuNav/style';
+import { NavbarNav, NavbarWrapper } from './style';
 
 type NavbarProps = BaseComponent & {
   isScrolling?: boolean;
 };
 
+const variants = {
+  open: {
+    display: 'block',
+    translateX: 0
+  },
+  closed: {
+    display: 'none',
+    translateX: 250,
+  }
+};
+
 const Navbar = ({ isScrolling, ...props }: NavbarProps) => {
-  const { isOpen, toggleModal } = useModal();
+  const [isOpen, toggleOpen] = useCycle(false, true);
+
+  const onToggleNav = () => toggleOpen();
 
   return (
     <NavbarNav>
       <NavbarWrapper $isScrolling={isScrolling} {...props}>
-        <MenuNav onToggle={toggleModal} />
+        <MenuNav onToggle={onToggleNav} />
       </NavbarWrapper>
 
-      <MenuModal $visible={isOpen}>
-        <Menu />
-        <CloseButton onClick={toggleModal} bgColor="transparent">
-          <CloseCircleOutlined />
-        </CloseButton>
-      </MenuModal>
+      <MenuModalNav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <MenuModal variants={variants}>
+          <Menu onToggle={onToggleNav} />
+          <CloseButton onClick={onToggleNav} bgColor="transparent">
+            <CloseCircleOutlined />
+          </CloseButton>
+        </MenuModal>
+      </MenuModalNav>
     </NavbarNav>
   );
 };

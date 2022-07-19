@@ -54,10 +54,11 @@ const FormItem = ({
               children as JSX.Element,
               isInput
                 ? {
+                    name: props?.name,
                     withErrors: meta.errors.length > 0,
                     ...control
                   }
-                : control
+                : { ...control, name: props?.name }
             )}
             {meta.errors.map((error, index) => (
               // eslint-disable-next-line react/no-array-index-key

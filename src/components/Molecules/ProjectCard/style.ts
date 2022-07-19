@@ -56,3 +56,14 @@ export const StyleImage = styled(Image)`
     height: 100% !important;
   }
 `;
+
+export const StyleBadge = styled.span`
+  padding: 5px 10px;
+  border-radius: 2rem;
+  font-weight: normal;
+  font-size: 0.7rem;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  background: ${({ theme }) => theme.colors.accentOpacity};
+`;

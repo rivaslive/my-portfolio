@@ -1,11 +1,13 @@
+import Link from 'next/link';
 import Lottie from 'lottie-react';
+
+import Text from 'components/Atoms/Text';
 import Title from 'components/Atoms/Title';
 import { Col } from 'components/Atoms/Grid';
-import Text from 'components/Atoms/Text';
 import Button from 'components/Atoms/Button';
-import Input from 'components/Atoms/Input';
-
 import animation from '../../../../public/animations/animation4.json';
+import { BannerBottomContent, BannerContent, BannerWrapper } from './style';
+import useTranslation from 'hooks/useTransalation';
 
 const options = {
   animationData: animation,
@@ -14,13 +16,9 @@ const options = {
     height: '100%'
   }
 };
-import {
-  BannerBottomContent,
-  BannerContent,
-  BannerWrapper,
-} from './style';
 
 const Banner = (props: BaseComponent) => {
+  const { t } = useTranslation();
   return (
     <BannerWrapper {...props}>
       <BannerContent>
@@ -56,7 +54,7 @@ const Banner = (props: BaseComponent) => {
             textTransform="uppercase"
             color="accentGradient"
           >
-            Software{' '}
+            {t('software')}{' '}
           </Title>
           Engineer
         </Title>
@@ -73,24 +71,26 @@ const Banner = (props: BaseComponent) => {
                   fontSize="1.7rem"
                   mobileSettings={{ textAlign: 'center' }}
                 >
-                  Start project with me, enter your email to communicate with
-                  you.
+                  I am very happy to start a project with you.
                 </Text>
               </Col>
 
               <Col sm={24} md={12} style={{ margin: '0 auto' }}>
                 <Text fontSize="1rem" color="secondaryText" margin="0 0 10px">
-                  Enter your email address
+                  Complete the form or follow me on Linkedin.
                 </Text>
-                <Input placeholder="example@mail.com" />
-                <Button
-                  style={{
-                    width: '100%',
-                    marginTop: '1rem'
-                  }}
-                >
-                  Start Project
-                </Button>
+                <Link href="#contact" passHref>
+                  <a>
+                    <Button
+                      style={{
+                        width: '100%',
+                        marginTop: '1rem'
+                      }}
+                    >
+                      CONTACT ME
+                    </Button>
+                  </a>
+                </Link>
               </Col>
             </BannerBottomContent>
           </Col>

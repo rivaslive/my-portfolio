@@ -53,7 +53,7 @@ const Projects = (props: ProjectsProps) => {
             description="React Developer, creating and improving online banking internal products using Nextjs and Nodejs."
             image="/brandformance.jpg"
             imageHover="/brandformance2.jpg"
-            link="https://www.brandformace.io"
+            link="https://www.brandformance.io"
             techs={['Typescript', 'Storybook', 'Nextjs']}
           />
         </Col>

@@ -2,54 +2,48 @@ import Link from 'next/link';
 import { MenuOutlined } from '@ant-design/icons';
 
 import Brand from 'components/Atoms/Brand';
-import Button from 'components/Atoms/Button';
-import { useAppTheme } from 'context/AppTheme';
-import { MoonIcon, SunIcon } from 'components/Atoms/icons';
+import SocialLinks from 'components/Molecules/SocialLinks';
 import {
   StyleMenuNav,
   StyleLink,
   StyleBrand,
   StyleWrapper,
-  MenuBurger
+  MenuBurger,
+  StyleLinks
 } from './style';
+import useTranslation from 'hooks/useTransalation';
 
 type MenuNavProps = BaseComponent & {
   onToggle?: () => void;
 };
 
-export const Menu = (props: BaseComponent) => {
-  const { themeToggle, theme } = useAppTheme();
-
+export const Menu = ({ onToggle, ...props }: MenuNavProps) => {
+  const { t } = useTranslation();
   return (
     <StyleMenuNav {...props}>
       <StyleBrand fontSize="2.2rem" className="brand-top" />
 
       <Link href="/" passHref>
-        <StyleLink>Home</StyleLink>
+        <StyleLink onClick={onToggle}>{t('navbar.home', 'Inicio')}</StyleLink>
       </Link>
       <Link href="#tech" passHref>
-        <StyleLink>Technologies</StyleLink>
+        <StyleLink onClick={onToggle}>{t('navbar.technologies', 'Tecnologías')}</StyleLink>
       </Link>
 
       <StyleBrand className="brand-center" />
 
       <Link href="#experience" passHref>
-        <StyleLink>Experience</StyleLink>
+        <StyleLink onClick={onToggle}>{t('navbar.experience', 'Experiencia')}</StyleLink>
       </Link>
       <Link href="#contact" passHref>
-        <StyleLink color="white" className="contact-me">
-          Contact
+        <StyleLink onClick={onToggle} color="white" className="contact-me">
+          {t('navbar.contact', 'Contacto')}
         </StyleLink>
       </Link>
 
-      <Button
-        color="text"
-        variant="icon"
-        onClick={themeToggle}
-        bgColor="transparent"
-      >
-        {theme === 'light' ? <MoonIcon /> : <SunIcon />}
-      </Button>
+      <StyleLinks>
+        <SocialLinks />
+      </StyleLinks>
     </StyleMenuNav>
   );
 };
@@ -57,7 +51,7 @@ export const Menu = (props: BaseComponent) => {
 const MenuNav = ({ onToggle, ...props }: MenuNavProps) => {
   return (
     <StyleWrapper {...props}>
-      <Menu className="only-desk" />
+      <Menu onToggle={onToggle} className="only-desk" />
 
       <Brand fontSize="2rem" className="only-mobile" />
 

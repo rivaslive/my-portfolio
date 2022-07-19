@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Text from 'components/Atoms/Text';
 
-import { StyleImage, StyleWrapper } from './style';
+import { StyleBadge, StyleImage, StyleWrapper } from './style';
 
 type ProjectCardProps = BaseComponent & {
   image: string;
@@ -64,8 +64,12 @@ const ProjectCard = ({
         }}
       >
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <Text fontWeight={800} fontSize="1.5rem">
-            {name}
+          <Text
+            fontWeight={800}
+            fontSize="1.5rem"
+            style={{ position: 'relative' }}
+          >
+            {name} <StyleBadge>Link</StyleBadge>
           </Text>
         </a>
         <Text color="secondaryText" fontSize="1rem">

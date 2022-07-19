@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { mediaQueries } from 'styles/theme';
 import Brand from 'components/Atoms/Brand';
 import Button from 'components/Atoms/Button';
+import {motion} from 'framer-motion';
 
 export const StyleWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +40,30 @@ export const StyleMenuNav = styled.div`
 
   ${mediaQueries.tablet} {
     flex-direction: row;
+  }
+`;
+
+export const StyleMenuMobileNav = styled(motion.ul)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  ${mediaQueries.tablet} {
+    flex-direction: row;
+  }
+`;
+
+export const StyleLinks = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 0;
+  margin-top: 20px;
+
+  ${mediaQueries.tablet} {
+    position: absolute;
+    margin-top: 0;
   }
 `;
 
@@ -95,9 +121,12 @@ export const CloseButton = styled(MenuBurger)`
   top: 20px;
   right: 20px;
   font-size: 1.5rem;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
-export const MenuModal = styled.div<{ $visible?: boolean }>`
+export const MenuModalNav = styled(motion.nav)``;
+
+export const MenuModal = styled(motion.div)`
   position: fixed;
   top: 0;
   right: 0;
@@ -108,6 +137,4 @@ export const MenuModal = styled.div<{ $visible?: boolean }>`
   background: ${({ theme }) => theme.colors.bgModal};
   box-shadow: rgb(2 1 1 / 40%) 0 5px 20px -5px;
   z-index: ${({ theme }) => theme.zIndex.nav};
-
-  display: ${({ $visible }) => ($visible ? 'block' : 'none')};
 `;

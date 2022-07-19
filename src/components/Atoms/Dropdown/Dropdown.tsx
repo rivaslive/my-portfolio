@@ -44,8 +44,9 @@ const Dropdown = ({
         <Button
           color="text"
           bgColor="input"
+          borderColor="borderColor"
           fontWeight="normal"
-          style={{ width: '100%' }}
+          style={{ width: '100%', borderWidth: 2 }}
         >
           {value ?? children}
         </Button>
