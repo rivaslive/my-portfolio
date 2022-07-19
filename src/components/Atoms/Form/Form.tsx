@@ -7,6 +7,8 @@ const Form = ({ name, form, ...props }: FormProps) => {
   return <StyleForm name={name} form={form} {...props} />;
 };
 
+Form.displayName = 'Form';
+
 Form.Item = FormItem;
 
 export default Form;

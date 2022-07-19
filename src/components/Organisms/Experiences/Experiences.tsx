@@ -1,12 +1,13 @@
 import Title from 'components/Atoms/Title';
 import Container from 'components/Atoms/Container';
-import { Col, Row } from 'components/Atoms/Grid';
+import {Col, Row} from 'components/Atoms/Grid';
 import Experience from 'components/Molecules/Experience';
 
 const Experiences = (props: BaseComponent) => {
   return (
-    <Container style={{ margin: '50px auto' }} {...props}>
+    <Container style={{margin: '50px auto'}} {...props}>
       <Title
+        align="center"
         fontSize="5rem"
         lineHeight="6rem"
         margin="40px 0 0"
@@ -30,12 +31,13 @@ const Experiences = (props: BaseComponent) => {
         </Title>
       </Title>
 
-      <br />
-      <br />
+      <br/>
+      <br/>
 
       <Row gutter={[0, 50]} justify="center">
         <Col span={24}>
           <Experience
+            time="06/2022 - Present"
             brand="Scotiabank Costa Rica"
             description="React Developer, creating and improving online banking internal products using reactjs and Nodejs."
             image="/scotiabank.webp"
@@ -44,18 +46,20 @@ const Experiences = (props: BaseComponent) => {
         </Col>
         <Col span={24}>
           <Experience
+            time="03/2022 - 05/2022"
             brand="Focus ITO El Salvador"
             description="Full Stack Developer, Process and Workflow Analyst."
             image="/focus.jpeg"
-            tasks={['Nextjs', 'Nodejs', 'Maps', 'e-commerce']}
+            tasks={['Typescript', 'Nextjs', 'Nodejs', 'Maps', 'e-commerce']}
           />
         </Col>
         <Col span={24}>
           <Experience
+            time="03/2021 - 04/2022"
             brand="Brandy Costa Rica"
             description="Full Stack Developer, creating and improving online banking internal products using reactjs and Nodejs. Process and Workflow Analyst."
             image="/brandy.png"
-            tasks={['Nextjs', 'Nodejs', 'Strapi', 'Keystonejs', 'Storybook']}
+            tasks={['Typescript', 'Nextjs', 'Nodejs', 'Strapi', 'Keystonejs', 'Storybook']}
           />
         </Col>
       </Row>

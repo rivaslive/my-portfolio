@@ -1,13 +1,14 @@
 import Text from 'components/Atoms/Text';
 import Image from 'components/Atoms/Image';
 
-import { StyleWrapper } from './style';
+import { StyleBadge, StyleWrapper } from './style';
 
 type ExperienceProps = BaseComponent & {
   image: string;
   brand: string;
   description: string;
   tasks: string[];
+  time?: string;
 };
 
 const Experience = ({
@@ -15,6 +16,7 @@ const Experience = ({
   brand,
   description,
   tasks,
+  time,
   ...props
 }: ExperienceProps) => {
   return (
@@ -26,7 +28,7 @@ const Experience = ({
         }}
       >
         <Text fontWeight={800} fontSize="1.5rem">
-          {brand}
+          {brand} {time && <StyleBadge>{time}</StyleBadge>}
         </Text>
         <Text color="secondaryText" fontSize="1rem">
           {description}

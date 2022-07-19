@@ -6,11 +6,12 @@ type WrapperProps = {
   $color: ColorType;
   $bgColor: ColorType;
   $borderColor: ColorType;
+  $isTextArea?: boolean;
 };
 
 export const StyleWrapper = styled.div<WrapperProps>`
   position: relative;
-  height: calc(2 * 1.25rem);
+  height: ${({ $isTextArea }) => ($isTextArea ? 'auto' : 'calc(2 * 1.25rem)')};
   display: inline-flex;
   align-items: center;
   width: 100%;
@@ -42,7 +43,6 @@ export const StyleLabel = styled.label`
 `;
 
 export const StyleInput = styled.input`
-  padding: 0;
   border: none;
   background: transparent;
   color: currentColor;
@@ -52,7 +52,7 @@ export const StyleInput = styled.input`
   height: 100%;
   min-width: 0;
   appearance: none;
-  margin: 0.25rem 0.625rem;
+  padding: 0.25rem 0.625rem;
 `;
 
 export const StyleButtonSearch = styled(Button)`

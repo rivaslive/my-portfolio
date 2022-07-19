@@ -6,14 +6,10 @@ export const StyleWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-radius: 12px;
+  border-radius: 50px;
   max-width: 650px;
   margin: 0 auto;
-  background: linear-gradient(
-    180deg,
-    rgba(35, 37, 49, 0.5),
-    rgba(15, 15, 24, 0.5)
-  );
+  background: ${({ theme }) => theme.colors.bgCard};
   backdrop-filter: blur(54px);
   transition: all 0.3s ease-in-out;
 
@@ -33,4 +29,12 @@ export const StyleWrapper = styled.div`
       margin-bottom: 0;
     }
   }
+`;
+
+export const StyleBadge = styled.span`
+  padding: 5px 10px;
+  border-radius: 2rem;
+  font-weight: normal;
+  font-size: 0.7rem;
+  background: ${({ theme }) => theme.colors.primaryOpacity};
 `;

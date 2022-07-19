@@ -1,4 +1,5 @@
 import { StyleImage } from './style';
+import { forwardRef } from 'react';
 
 type ImageProps = BaseComponent & {
   src?: string;
@@ -8,29 +9,27 @@ type ImageProps = BaseComponent & {
   objectFit?: 'cover' | 'contain' | 'none';
 };
 
-const Image = ({
-  id,
-  className,
-  src,
-  width,
-  height,
-  alt,
-  objectFit = 'contain',
-  ...rest
-}: ImageProps) => {
-  return (
-    <StyleImage id={id} className={className}>
-      <img
-        alt={alt}
-        src={src}
-        width={width}
-        loading="lazy"
-        height={height}
-        style={{ objectFit }}
-        {...rest}
-      />
-    </StyleImage>
-  );
-};
+const Image = forwardRef<HTMLDivElement, ImageProps>(
+  (
+    { id, className, src, width, height, alt, objectFit = 'contain', ...rest },
+    _ref
+  ) => {
+    return (
+      <StyleImage ref={_ref} id={id} className={className}>
+        <img
+          alt={alt}
+          src={src}
+          width={width}
+          loading="lazy"
+          height={height}
+          style={{ objectFit }}
+          {...rest}
+        />
+      </StyleImage>
+    );
+  }
+);
+
+Image.displayName = 'Image';
 
 export default Image;

@@ -31,7 +31,12 @@ const FormItem = ({
         return (
           <StyleFormItem>
             {label && (
-              <Text fontSize="12px" fontWeight={500} htmlTag="span">
+              <Text
+                fontSize="12px"
+                fontWeight={500}
+                htmlTag="div"
+                style={{ paddingBottom: 5 }}
+              >
                 {isRequired && (
                   <Text
                     color="error"
@@ -50,9 +55,9 @@ const FormItem = ({
               isInput
                 ? {
                     withErrors: meta.errors.length > 0,
-                    ...control,
+                    ...control
                   }
-                : control,
+                : control
             )}
             {meta.errors.map((error, index) => (
               // eslint-disable-next-line react/no-array-index-key

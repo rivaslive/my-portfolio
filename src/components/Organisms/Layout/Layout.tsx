@@ -1,18 +1,21 @@
-import { LayoutWrapper } from 'components/Organisms/Layout/style';
 import { ReactNode } from 'react';
-import Navbar from 'components/Organisms/Navbar';
+import dynamic from 'next/dynamic';
+
 import useScrollPosition from 'hooks/useScrollPosition';
+import { LayoutWrapper } from './style';
+
+const Navbar = dynamic(import('components/Organisms/Navbar'));
 
 type LayoutProps = BaseComponent & {
   children?: ReactNode;
 };
 
 const Layout = ({ children, ...props }: LayoutProps) => {
-  const { detached } = useScrollPosition(5);
+  const { detached, loading } = useScrollPosition(5);
 
   return (
     <LayoutWrapper {...props}>
-      <Navbar isScrolling={detached} />
+      {!loading && <Navbar isScrolling={detached} />}
       {children}
     </LayoutWrapper>
   );
