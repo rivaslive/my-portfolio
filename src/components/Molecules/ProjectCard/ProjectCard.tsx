@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Text from 'components/Atoms/Text';
 
-import { StyleBadge, StyleImage, StyleWrapper } from './style';
+import {StyleBadge, StyleContent, StyleImage, StyleWrapper} from './style';
 
 type ProjectCardProps = BaseComponent & {
   image: string;
@@ -58,11 +58,7 @@ const ProjectCard = ({
   return (
     <StyleWrapper {...props}>
       <StyleImage ref={imageRef} alt="" src={image} width={250} height="100%" />
-      <div
-        style={{
-          marginLeft: '30px'
-        }}
-      >
+      <StyleContent>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <Text
             fontWeight={800}
@@ -85,7 +81,7 @@ const ProjectCard = ({
             {tech}
           </Text>
         ))}
-      </div>
+      </StyleContent>
     </StyleWrapper>
   );
 };

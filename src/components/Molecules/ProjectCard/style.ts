@@ -3,7 +3,7 @@ import { mediaQueries } from 'styles/theme';
 import Image from 'components/Atoms/Image';
 
 export const StyleWrapper = styled.div`
-  padding: 2.5rem;
+  padding: 1rem 1rem 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,10 +20,19 @@ export const StyleWrapper = styled.div`
 
   ${mediaQueries.mobile} {
     flex-direction: row;
+    padding: 2.5rem;
 
     img {
       margin-bottom: 0;
     }
+  }
+`;
+
+export const StyleContent = styled.div`
+  margin-left: 0;
+
+  ${mediaQueries.tablet} {
+    margin-left: 30px;
   }
 `;
 
@@ -65,5 +74,6 @@ export const StyleBadge = styled.span`
   position: absolute;
   right: 0;
   top: -15px;
+  color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.accentOpacity};
 `;

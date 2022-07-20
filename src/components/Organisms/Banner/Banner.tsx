@@ -59,17 +59,29 @@ const Banner = (props: BaseComponent) => {
           Engineer
         </Title>
 
-        <BannerBottomContent align="middle" style={{ paddingBottom: '7rem' }}>
+        <BannerBottomContent
+          align="middle"
+          style={{ paddingBottom: '7rem' }}
+          gutter={[
+            { xs: 0, lg: 10 },
+            { xs: 10, lg: 0 }
+          ]}
+        >
           <Col xs={24} lg={12}>
             <Lottie {...options} />
           </Col>
 
           <Col xs={24} lg={12}>
-            <BannerBottomContent gutter={20}>
+            <BannerBottomContent
+              gutter={[
+                { xs: 0, lg: 20 },
+                { xs: 20, lg: 0 }
+              ]}
+            >
               <Col sm={24} md={12}>
                 <Text
                   fontSize="1.7rem"
-                  mobileSettings={{ textAlign: 'center' }}
+                  fontWeight={600}
                 >
                   {t(
                     'bannerMessage',

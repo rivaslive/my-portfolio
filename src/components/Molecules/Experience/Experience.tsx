@@ -1,7 +1,7 @@
 import Text from 'components/Atoms/Text';
 import Image from 'components/Atoms/Image';
 
-import { StyleBadge, StyleWrapper } from './style';
+import {StyleBadge, StyleContent, StyleWrapper} from './style';
 
 type ExperienceProps = BaseComponent & {
   image: string;
@@ -22,11 +22,7 @@ const Experience = ({
   return (
     <StyleWrapper {...props}>
       <Image alt="" src={image} width={100} height={100} />
-      <div
-        style={{
-          marginLeft: '10px'
-        }}
-      >
+      <StyleContent>
         <Text fontWeight={800} fontSize="1.5rem">
           {brand} {time && <StyleBadge>{time}</StyleBadge>}
         </Text>
@@ -38,12 +34,14 @@ const Experience = ({
           Task:
         </Text>
 
-        {tasks.map((task, index) => (
-          <Text color="secondaryText" htmlTag="li" key={index} fontSize="1rem">
-            {task}
-          </Text>
-        ))}
-      </div>
+        <ul>
+          {tasks.map((task, index) => (
+            <Text color="secondaryText" htmlTag="li" key={index} fontSize="1rem">
+              {task}
+            </Text>
+          ))}
+        </ul>
+      </StyleContent>
     </StyleWrapper>
   );
 };

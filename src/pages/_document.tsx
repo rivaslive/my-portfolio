@@ -64,7 +64,7 @@ class MyDocument extends Document {
           />
           <link
             rel="icon"
-            href="https://kevin-rivas.vercel.com/favicon.png"
+            href="https://kevin-rivas.vercel.app/favicon.png"
             type="image/png"
           />
 
