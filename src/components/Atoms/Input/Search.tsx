@@ -7,7 +7,7 @@ import {
   StyleButtonSearch,
   StyleInput,
   StyleLabel,
-  StyleWrapper,
+  StyleWrapper
 } from './style';
 
 export interface SearchInputProps extends InputProps {
@@ -30,7 +30,7 @@ const Search = forwardRef<HTMLInputElement, SearchInputProps>(
       bgColor = 'white',
       ...restInputProps
     },
-    _ref,
+    _ref
   ) => {
     const [inputValue, setInputValue] = useState('');
     const [searchValue, setSearchValue] = useState('');
@@ -88,7 +88,9 @@ const Search = forwardRef<HTMLInputElement, SearchInputProps>(
         </StyleButtonSearch>
       </StyleWrapper>
     );
-  },
+  }
 );
+
+Search.displayName = 'Search';
 
 export default Search;

@@ -16,6 +16,7 @@ const Image = forwardRef<HTMLDivElement, ImageProps>(
   ) => {
     return (
       <StyleImage ref={_ref} id={id} className={className}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt={alt}
           src={src}
