@@ -71,17 +71,34 @@ class MyDocument extends Document {
           {/* default preferences */}
           <meta name="author" content="rivaslive" />
           <meta property="title" content="Kevin Rivas" />
-          <meta property="description" content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native." />
+          <meta
+            property="description"
+            content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+          />
           <meta title="image" content="/shared.png" />
 
-          {/* google preferences */}
-          <meta property="og:title" content="Kevin Rivas" />
-          <meta property="og:description" content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native." />
+          {/* Open Graph preferences */}
           <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://kevin-rivas.vercel.app/" />
+          <meta property="og:title" content="Kevin Rivas" />
           <meta property="og:image" content="/shared.png" />
-          <meta property="og:image:secure_url" content="/shared.png" />
-          <meta property="og:image:type" content="image/png" />
-          <meta property="og:image:alt" content="Kevin Rivas" />
+          <meta
+            property="og:description"
+            content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+          />
+
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="https://kevin-rivas.vercel.app/"
+          />
+          <meta property="twitter:title" content="Kevin Rivas" />
+          <meta
+            property="twitter:description"
+            content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+          />
+          <meta property="twitter:image" content="/shared.png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
