@@ -69,7 +69,7 @@ class MyDocument extends Document {
           />
 
           {/* default preferences */}
-          <meta name="author" content="rivaslive" />
+          <meta name="author" content="[rivaslive]" />
           <meta property="title" content="Kevin Rivas" />
           <meta
             property="description"
@@ -78,6 +78,7 @@ class MyDocument extends Document {
           <meta title="image" content="/shared.png" />
 
           {/* Open Graph preferences */}
+          <meta name="og:author" content="[rivaslive]" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://kevin-rivas.vercel.app/" />
           <meta property="og:title" content="Kevin Rivas" />
@@ -88,6 +89,7 @@ class MyDocument extends Document {
           />
 
           {/* Twitter */}
+          <meta name="twitter:author" content="[rivaslive]" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
