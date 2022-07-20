@@ -40,13 +40,55 @@ class MyDocument extends Document {
       <Html lang="es">
         <Head>
           <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          />
+
           {/* Force IE 8/9/10 to use its latest rendering engine  */}
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           {/* Dropdown rendering engine order  */}
           <meta name="renderer" content="webkit|ie-comp|ie-stand" />
 
+          <meta name="msapplication-TileImage" content="/favicon.png" />
+          <link
+            rel="apple-touch-icon-precomposed"
+            sizes="128x128"
+            href="/favicon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/favicon.png"
+            sizes="128x128"
+          />
+          <link
+            rel="icon"
+            href="https://kevin-rivas.vercel.com/favicon.png"
+            type="image/png"
+          />
+
+          {/* default preferences */}
+          <meta name="author" content="rivaslive" />
+          <meta property="title" content="Kevin Rivas" />
+          <meta property="description" content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native." />
+          <meta title="image" content="/shared.png" />
+
+          {/* google preferences */}
+          <meta property="og:title" content="Kevin Rivas" />
+          <meta property="og:description" content="Soy Ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native." />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="/shared.png" />
+          <meta property="og:image:secure_url" content="/shared.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:alt" content="Kevin Rivas" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
             rel="stylesheet"
