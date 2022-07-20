@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Lottie from 'lottie-react';
 import { useForm } from 'rc-field-form';
 
 import Form from 'components/Atoms/Form';
@@ -8,14 +9,14 @@ import Title from 'components/Atoms/Title';
 import Button from 'components/Atoms/Button';
 import { Col, Row } from 'components/Atoms/Grid';
 import Dropdown from 'components/Atoms/Dropdown';
+import useTranslation from 'hooks/useTransalation';
 import animation from '../../../../public/animations/successful.json';
 
 import { StyleSuccess } from './style';
-import Lottie from 'lottie-react';
 
 const options = {
   animationData: animation,
-  loop: true,
+  loop: false,
   style: {
     height: '225px'
   }
@@ -31,6 +32,7 @@ type FormType = {
 };
 
 const ContactForm = ({ style = {}, ...props }: ContactFormProps) => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [form] = useForm();
@@ -94,15 +96,15 @@ const ContactForm = ({ style = {}, ...props }: ContactFormProps) => {
       {...props}
     >
       <Title htmlTag="h3" lineHeight="3rem" margin="0 0 30px">
-        Contact{' '}
+        {t('contact_with_me', 'Contac')}
         <Title htmlTag="span" color="primaryGradient" lineHeight="1em">
-          with me
+          {t('with_me', 'tame')}
         </Title>
       </Title>
       <Form.Item
         isRequired
         name="email"
-        label="Email"
+        label={t('email', 'Correo electrónico')}
         rules={[{ type: 'email' }]}
       >
         <Input placeholder="mail@example.com" />
@@ -114,29 +116,37 @@ const ContactForm = ({ style = {}, ...props }: ContactFormProps) => {
         ]}
       >
         <Col xs={24} md={12}>
-          <Form.Item name="subject" label="Subject" isRequired>
+          <Form.Item name="subject" label={t('subject', 'Tema')} isRequired>
             <Dropdown
               menu={
                 <Dropdown.Menu>
                   <Dropdown.Item key="start-project">
-                    Start Project
+                    {t('start_project', 'Iniciar Proyecto')}
                   </Dropdown.Item>
-                  <Dropdown.Item key="freelance">Free Lance</Dropdown.Item>
-                  <Dropdown.Item key="contractor">Contractor</Dropdown.Item>
+                  <Dropdown.Item key="freelance">
+                    {t('free_lance', 'Freelance')}
+                  </Dropdown.Item>
+                  <Dropdown.Item key="contractor">
+                    {t('contractor', 'Contrato tiempo completo')}
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               }
             >
-              --- Select a option ---
+              {t('select_option', '--- Seleccione una opción ---')}
             </Dropdown>
           </Form.Item>
         </Col>
         <Col xs={24} md={12}>
-          <Form.Item name="fullName" label="Full Name" isRequired>
+          <Form.Item
+            name="fullName"
+            label={t('full_name', 'Nombre completo')}
+            isRequired
+          >
             <Input placeholder="John Artur" />
           </Form.Item>
         </Col>
       </Row>
-      <Form.Item name="message" label="Message" isRequired>
+      <Form.Item name="message" label={t('message', 'Mensaje')} isRequired>
         <Input rows={7} htmlTag="textarea" placeholder="Message title" />
       </Form.Item>
       <Form.Item>
@@ -146,7 +156,7 @@ const ContactForm = ({ style = {}, ...props }: ContactFormProps) => {
           bgColor="primaryGradient"
           style={{ width: '100%', marginTop: 20 }}
         >
-          CONTACT ME NOW!
+          {t('contact_me_now', 'Contactame ahora')}
         </Button>
       </Form.Item>
     </Form>

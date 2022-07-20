@@ -6,5 +6,47 @@
     "contact": "Contacto"
   },
   "software": "Software",
-  "engineer": "Ingeniero de"
+  "engineer": "Ingeniero de",
+  "bannerMessage": "Estoy muy feliz de crear una oportunidad juntos.",
+  "bannerActionText": "Completa el formulario de contacto o sígueme en Linkedin.",
+  "contact_me": "Contacta me",
+  "over_the_pass": "En los últimos",
+  "years": "años",
+  "description1": "Estado trabajando arduamente para perfeccionar las aplicaciones ya construidas o crear desde cero increíbles sitios y plataformas.",
+  "description2": "Soy ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native.",
+  "description3": "Me encanta colaborar y compartir mi experiencia y mi trabajo, soy capaz de liderar equipos en los cuales puedan dar lo mejor de sí y sentirse identificados con el producto  y la empresa.",
+  "text_technology": "Estas son algunas de las tecnologías que uso en mis proyectos.",
+  "experience": "Experiencia de",
+  "work": "Trabajo",
+  "projects": "Proyectos",
+  "experiences": {
+    "experience1": {
+      "date": "06/2022 - Actualmente",
+      "description": "Desarrollador React, Creando y mejorando productos internos de banca online utilizando Reactjs y Nodejs."
+    },
+    "experience2": {
+      "date": "03/2022 - 05/2022",
+      "description": "Desarrollador FullStack, procesos y flujos de trabajo."
+    },
+    "experience3": {
+      "date": "03/2021 - 03/2022",
+      "description": "Desarrollador React, Creando y mejorando productos internos y para clientes utilizando Neactjs y Nodejs. procesos y flujo de trabajo"
+    }
+  },
+  "projects_all": {
+    "project1": "Lib de componentes para React Native, publicada en NPM.",
+    "project2": "Desarrollador React, Creando y mejorando productos internos y para clientes utilizando Neactjs y Nodejs. procesos y flujo de trabajo",
+    "project3": "Desarrollador React, Creando y mejorando productos internos y para clientes utilizando Neactjs y Nodejs. procesos y flujo de trabajo"
+  },
+  "contact_with_me": "Contac",
+  "with_me": "tame",
+  "email": "Correo electrónico",
+  "subject": "Tema",
+  "full_name": "Nombre completo",
+  "message": "Mensaje",
+  "contact_me_now": "Contactame ahora",
+  "select_option": "--- Seleccione una opción ---",
+  "start_project": "Iniciar Proyecto",
+  "free_lance": "Freelance",
+  "contractor": "Contrato tiempo completo"
 }

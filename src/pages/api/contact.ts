@@ -27,7 +27,6 @@ export default async function handler(
     emailInstance.getTemplate('contact', body);
 
     const { error } = await emailInstance.send({
-      to: 'kevin.rivaslive@gmail.com',
       subject: `${subject} - ${fullName}`
     });
 

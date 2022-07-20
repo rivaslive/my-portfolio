@@ -1,6 +1,7 @@
 import Text from 'components/Atoms/Text';
 import Title from 'components/Atoms/Title';
 import { Col, Row } from 'components/Atoms/Grid';
+import useTranslation from 'hooks/useTransalation';
 import Container from 'components/Atoms/Container';
 
 import { StyleImage } from './style';
@@ -8,6 +9,7 @@ import { StyleImage } from './style';
 type WhoWeAreProps = BaseComponent & {};
 
 const WhoWeAre = (props: WhoWeAreProps) => {
+  const { t } = useTranslation();
   const years = new Date().getFullYear() - 2018;
 
   return (
@@ -23,7 +25,7 @@ const WhoWeAre = (props: WhoWeAreProps) => {
               lineHeight: '3rem'
             }}
           >
-            Over the past
+            {t('over_the_pass', 'En los últimos')}
             <br />
             <Title
               htmlTag="span"
@@ -35,22 +37,18 @@ const WhoWeAre = (props: WhoWeAreProps) => {
                 lineHeight: '3rem'
               }}
             >
-              {years} years,
+              {years} {t('years', 'años')}
             </Title>
           </Title>
 
           <Text margin="30px 0 0" fontSize="1.2rem">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-            debitis delectus dignissimos enim illum nostrum quasi quis sint
-            unde! Animi dicta expedita molestiae possimus. Ad debitis dolorum
-            perferendis quibusdam sequi! Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Beatae debitis delectus dignissimos enim illum
-            nostrum quasi quis sint unde! Animi dicta expedita molestiae
-            possimus. Ad debitis dolorum perferendis quibusdam sequi! Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Beatae debitis
-            delectus dignissimos enim illum nostrum quasi quis sint unde! Animi
-            dicta expedita molestiae possimus. Ad debitis dolorum perferendis
-            quibusdam sequi!
+            {t('description1')}
+            <br/>
+            <br/>
+            {t('description2')}
+            <br/>
+            <br/>
+            {t('description3')}
           </Text>
         </Col>
         <Col xs={24} lg={12} style={{ textAlign: 'center' }}>

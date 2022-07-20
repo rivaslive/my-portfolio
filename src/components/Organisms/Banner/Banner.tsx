@@ -71,23 +71,30 @@ const Banner = (props: BaseComponent) => {
                   fontSize="1.7rem"
                   mobileSettings={{ textAlign: 'center' }}
                 >
-                  I am very happy to start a project with you.
+                  {t(
+                    'bannerMessage',
+                    'Estoy muy feliz de crear una oportunidad juntos.'
+                  )}
                 </Text>
               </Col>
 
               <Col sm={24} md={12} style={{ margin: '0 auto' }}>
                 <Text fontSize="1rem" color="secondaryText" margin="0 0 10px">
-                  Complete the form or follow me on Linkedin.
+                  {t(
+                    'bannerActionText',
+                    'Completa el formulario de contacto o sígueme en Linkedin.'
+                  )}
                 </Text>
                 <Link href="#contact" passHref>
                   <a>
                     <Button
                       style={{
                         width: '100%',
-                        marginTop: '1rem'
+                        marginTop: '1rem',
+                        textTransform: 'uppercase'
                       }}
                     >
-                      CONTACT ME
+                      {t('contact_me', 'Contacta me')}
                     </Button>
                   </a>
                 </Link>

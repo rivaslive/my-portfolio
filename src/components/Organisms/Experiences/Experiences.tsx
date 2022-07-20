@@ -1,11 +1,13 @@
 import Title from 'components/Atoms/Title';
 import Container from 'components/Atoms/Container';
-import {Col, Row} from 'components/Atoms/Grid';
+import { Col, Row } from 'components/Atoms/Grid';
+import useTranslation from 'hooks/useTransalation';
 import Experience from 'components/Molecules/Experience';
 
 const Experiences = (props: BaseComponent) => {
+  const { t } = useTranslation();
   return (
-    <Container style={{margin: '50px auto'}} {...props}>
+    <Container style={{ margin: '50px auto' }} {...props}>
       <Title
         align="center"
         fontSize="5rem"
@@ -16,7 +18,7 @@ const Experiences = (props: BaseComponent) => {
           lineHeight: '3.2rem'
         }}
       >
-        Work{' '}
+        {t('experience', 'Experiencia de')}{' '}
         <Title
           htmlTag="span"
           fontSize="5rem"
@@ -27,39 +29,57 @@ const Experiences = (props: BaseComponent) => {
             lineHeight: '3.2rem'
           }}
         >
-          Experiences
+          {t('work', 'Trabajo')}
         </Title>
       </Title>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Row gutter={[0, 50]} justify="center">
         <Col span={24}>
           <Experience
-            time="06/2022 - Present"
+            time={t('experiences.experience1.date', '06/2022 - Actualmente')}
             brand="Scotiabank Costa Rica"
-            description="React Developer, creating and improving online banking internal products using reactjs and Nodejs."
             image="/scotiabank.webp"
             tasks={['code improvement', 'Reactjs', 'Nodejs']}
+            description={t(
+              'experiences.experience1.description',
+              'Desarrollador React, Creando y mejorando productos internos de banca online utilizando Reactjs y Nodejs.'
+            )}
           />
         </Col>
         <Col span={24}>
           <Experience
-            time="03/2022 - 05/2022"
+            time={t('experiences.experience2.date', '03/2022 - 05/2022')}
             brand="Focus ITO El Salvador"
-            description="Full Stack Developer, Process and Workflow Analyst."
             image="/focus.jpeg"
             tasks={['Typescript', 'Nextjs', 'Nodejs', 'Maps', 'e-commerce']}
+            description={t(
+              'experiences.experience2.description',
+              'Desarrollador FullStack, procesos y flujos de trabajo.'
+            )}
           />
         </Col>
         <Col span={24}>
           <Experience
-            time="03/2021 - 04/2022"
+            time={t('experiences.experience3.date', '03/2021 - 03/2022')}
             brand="Brandy Costa Rica"
-            description="Full Stack Developer, creating and improving online banking internal products using reactjs and Nodejs. Process and Workflow Analyst."
             image="/brandy.png"
-            tasks={['Typescript', 'Nextjs', 'Nodejs', 'Strapi', 'Keystonejs', 'Storybook']}
+            tasks={[
+              'Typescript',
+              'Nextjs',
+              'Nodejs',
+              'Strapi',
+              'Keystonejs',
+              'Storybook'
+            ]}
+            description={
+              t(
+                'experiences.experience3.description',
+                'Desarrollador React, Creando y mejorando productos internos y para clientes utilizando Neactjs y Nodejs. procesos y flujo de trabajo'
+              )
+            }
           />
         </Col>
       </Row>

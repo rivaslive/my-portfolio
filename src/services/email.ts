@@ -63,6 +63,7 @@ export default class EmailService {
         html,
         from: '"My Portfolio" <rivaslive.notification@gmail.com>',
         text: 'Contact Message',
+        to: process.env.EMAIL_RECEIVED,
         ...mailOptions
       });
       return {

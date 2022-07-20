@@ -1,11 +1,14 @@
 import Title from 'components/Atoms/Title';
 import { Col, Row } from 'components/Atoms/Grid';
+import useTranslation from 'hooks/useTransalation';
 import Container from 'components/Atoms/Container';
 import ProjectCard from 'components/Molecules/ProjectCard';
 
 type ProjectsProps = BaseComponent & {};
 
 const Projects = (props: ProjectsProps) => {
+  const { t } = useTranslation();
+
   return (
     <Container style={{ margin: '50px auto' }} {...props}>
       <Title
@@ -18,7 +21,7 @@ const Projects = (props: ProjectsProps) => {
           lineHeight: '3.2rem'
         }}
       >
-        Projects
+        {t('projects', 'Proyectos')}
       </Title>
 
       <br />
@@ -28,7 +31,10 @@ const Projects = (props: ProjectsProps) => {
         <Col span={24}>
           <ProjectCard
             name="React Native Beauty Design"
-            description="Lib components for React Native, publish in NPM."
+            description={t(
+              'projects_all.project1',
+              'Lib de componentes para React Native, publicada en NPM.'
+            )}
             image="/beauty-design1.jpg"
             imageHover="/beauty-design2.jpg"
             link="https://www.beauty-design.app/"
@@ -39,7 +45,10 @@ const Projects = (props: ProjectsProps) => {
         <Col span={24}>
           <ProjectCard
             name="Catalejo Invest Group"
-            description="React Developer, creating and improving online banking internal products using Nextjs and Nodejs."
+            description={t(
+              'projects_all.project2',
+              'Lib de componentes para React Native, publicada en NPM.'
+            )}
             image="/catalejo2.png"
             imageHover="/catalejo.jpg"
             link="https://www.catalejo.cr"
@@ -50,7 +59,10 @@ const Projects = (props: ProjectsProps) => {
         <Col span={24}>
           <ProjectCard
             name="Brandformance"
-            description="React Developer, creating and improving online banking internal products using Nextjs and Nodejs."
+            description={t(
+              'projects_all.project3',
+              'Lib de componentes para React Native, publicada en NPM.'
+            )}
             image="/brandformance.jpg"
             imageHover="/brandformance2.jpg"
             link="https://www.brandformance.io"
