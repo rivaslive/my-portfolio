@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mediaQueries } from 'styles/theme';
 import Brand from 'components/Atoms/Brand';
 import Button from 'components/Atoms/Button';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const StyleWrapper = styled.div`
   position: relative;
@@ -137,4 +137,8 @@ export const MenuModal = styled(motion.div)`
   background: ${({ theme }) => theme.colors.bgModal};
   box-shadow: rgb(2 1 1 / 40%) 0 5px 20px -5px;
   z-index: ${({ theme }) => theme.zIndex.nav};
+
+  ${mediaQueries.tablet} {
+    display: none !important;
+  }
 `;
