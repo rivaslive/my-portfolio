@@ -1,4 +1,5 @@
 import 'styles/grid.css';
+import Head from 'next/head';
 import { memo, ReactNode } from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
@@ -22,11 +23,16 @@ AppRenderTheme.displayName = 'AppRenderTheme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AppThemeProvider>
-      <AppRenderTheme>
-        <Component {...pageProps} />
-      </AppRenderTheme>
-    </AppThemeProvider>
+    <>
+      <Head>
+        <title>Kevin Rivas</title>
+      </Head>
+      <AppThemeProvider>
+        <AppRenderTheme>
+          <Component {...pageProps} />
+        </AppRenderTheme>
+      </AppThemeProvider>
+    </>
   );
 }
 
