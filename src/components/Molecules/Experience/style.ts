@@ -7,7 +7,7 @@ export const StyleWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   border-radius: 50px;
-  max-width: 650px;
+  //max-width: 650px;
   margin: 0 auto;
   background: ${({ theme }) => theme.colors.bgCard};
   backdrop-filter: blur(54px);

@@ -4,7 +4,7 @@ import { getStyleResponsive, Size } from './Config';
 export const StyleContainer = styled.div<{ $size: Size }>`
   display: block;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 auto;
 
   ${({ $size }) => getStyleResponsive({ size: $size })}

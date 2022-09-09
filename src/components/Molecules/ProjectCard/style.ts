@@ -9,14 +9,15 @@ export const StyleWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   border-radius: 50px;
-  max-width: 650px;
+  //max-width: 650px;
   margin: 0 auto;
   backdrop-filter: blur(54px);
   background: ${({ theme }) => theme.colors.bgCard};
 
   img {
     border-radius: 12px;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    display: block;
   }
 
   ${mediaQueries.mobile} {
@@ -57,11 +58,16 @@ export const StyleImage = styled(Image)`
   background-size: cover;
   position: relative;
   border-radius: 50px;
+  padding-bottom: 20px;
   overflow: hidden;
   flex-shrink: 0;
 
   img {
     border-radius: 50px;
+  }
+
+  ${mediaQueries.tablet} {
+    padding-bottom: 0;
   }
 `;
 
