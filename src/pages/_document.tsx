@@ -14,7 +14,7 @@ const metaInfo = {
   description:
     'Soy Kevin Rivas ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native.',
   imgs: {
-    shared: 'https://kevin-rivas.com/shared.png',
+    shared: 'https://kevin-rivas.com/me/shared.png',
     favicon: '/favicon.ico',
     favicon16: '/favicon-16x16.png',
     favicon32: '/favicon-32x32.png',
