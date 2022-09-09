@@ -20,18 +20,23 @@ const pdfOptions = {
 const cvPathCompleted = '/docs/kevin-resume-complete.pdf';
 const cvPath = '/docs/kevin-resume.pdf';
 
+const downloadURI = (uri: string, name: string = '') => {
+  const link = document.createElement('a');
+  link.setAttribute('download', name);
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+};
+
 const RenderCV = (props: RenderCVProps) => {
-  const downloadURI = (uri: string, name: string = '') => {
-    const link = document.createElement('a');
-    link.setAttribute('download', name);
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-  };
 
   const onDownloadCv = () => {
     downloadURI(cvPath, `Kevin's Resume.pdf`);
+  };
+
+  const onDownloadCompleteCv = () => {
+    downloadURI(cvPathCompleted, `Kevin's Resume - complete.pdf`);
   };
 
   return (
@@ -50,7 +55,7 @@ const RenderCV = (props: RenderCVProps) => {
           <Button
             title="Curriculum version completa"
             margin="20px auto 0"
-            onClick={onDownloadCv}
+            onClick={onDownloadCompleteCv}
           >
             <CloudDownloadOutlined style={{ marginRight: 5, fontSize: 18 }} />{' '}
             Curriculum Completo
