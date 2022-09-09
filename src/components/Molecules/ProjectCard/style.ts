@@ -53,8 +53,8 @@ export const StyleContent = styled.div`
 `;
 
 export const StyleImage = styled(Image)`
-  width: 278px;
-  height: 417px;
+  width: 100%;
+  height: 420px;
   background-size: cover;
   position: relative;
   border-radius: 50px;
@@ -62,12 +62,18 @@ export const StyleImage = styled(Image)`
   overflow: hidden;
   flex-shrink: 0;
 
+  > span {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
   img {
     border-radius: 50px;
   }
 
   ${mediaQueries.tablet} {
     padding-bottom: 0;
+    width: 250px;
   }
 `;
 

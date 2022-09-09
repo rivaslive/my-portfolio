@@ -30,7 +30,7 @@ const ProjectCard = ({
     <a href={link} target="_blank" rel="noopener noreferrer">
       <StyleWrapper {...props}>
         <StyleAnimation />
-        <StyleImage unoptimized objectFit="cover" src={image} width={250} height={420} />
+        <StyleImage unoptimized objectFit="cover" src={image} width="100%" height="100%" />
         <StyleContent>
           <Text
             fontWeight={800}
