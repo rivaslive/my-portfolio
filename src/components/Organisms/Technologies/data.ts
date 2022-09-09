@@ -1,67 +1,67 @@
-export const DataTecnhologies = [
+export const DataTechnologies = [
   {
     key: 'javascript',
     title: 'JavaScript',
-    image: '/javascript.png'
+    image: '/technologies/javascript.webp'
   },
   {
     key: 'typescript',
     title: 'TypeScript',
-    image: '/typescript.png'
+    image: '/technologies/typescript.webp'
   },
   {
     key: 'react',
     title: 'ReactJs',
-    image: '/reactjs.png'
+    image: '/technologies/reactjs.webp'
   },
   {
     key: 'styled-components',
     title: 'styled-components',
-    image: '/styled.png'
+    image: '/technologies/styled.webp'
   },
   {
     key: 'stitches',
     title: 'Stitches',
-    image: '/stitches.jpeg'
+    image: '/technologies/stitches.webp'
   },
   {
     key: 'storybook',
     title: 'Storybook',
-    image: '/storybook.svg'
+    image: '/technologies/storybook.svg'
   },
   {
     key: 'atomic',
     title: 'Atomic Design',
-    image: '/atomic.webp'
+    image: '/technologies/atomic.webp'
   },
   {
     key: 'redux',
     title: 'Redux',
-    image: '/redux.png'
+    image: '/technologies/redux.webp'
   },
   {
     key: 'css',
     title: 'CSS',
-    image: '/css.png'
+    image: '/technologies/css.webp'
   },
   {
     key: 'html',
     title: 'HTML',
-    image: '/html.svg'
+    image: '/technologies/html.svg'
   },
   {
     key: 'git',
     title: 'GIT',
-    image: '/git.svg'
+    image: '/technologies/git.svg'
   },
   {
     key: 'figma',
     title: 'Figma',
-    image: '/figma.svg'
+    image: '/technologies/figma.svg'
   },
   {
     key: 'jira',
     title: 'Jira Software',
-    image: '/jira.png'
+    image: '/technologies/jira.webp'
   },
 ]

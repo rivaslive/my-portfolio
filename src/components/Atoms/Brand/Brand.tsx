@@ -5,12 +5,8 @@ type BrandProps = BaseComponent & {
   margin?: string;
 };
 
-const Brand = ({ fontSize = '2rem', ...props }: BrandProps) => {
-  return (
-    <StyleBrand htmlTag="div" fontSize={fontSize} {...props}>
-      Kevin R.
-    </StyleBrand>
-  );
+const Brand = ({ fontSize = '2rem', margin, ...props }: BrandProps) => {
+  return <StyleBrand src="/logo.webp" width={50} alt="Kevin Rivas logo.png" {...props} />;
 };
 
 export default Brand;

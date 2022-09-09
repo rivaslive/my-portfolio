@@ -1,6 +1,6 @@
 import 'styles/grid.css';
 import Head from 'next/head';
-import { memo, ReactNode } from 'react';
+import React, { memo, ReactNode } from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
@@ -25,6 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
         <title>Kevin Rivas</title>
       </Head>
       <AppThemeProvider>

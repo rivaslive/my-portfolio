@@ -15,7 +15,7 @@ const Contact = (props: ContactProps) => {
             alt="kevin rivas"
             width="100%"
             height={400}
-            src="/my-present.png"
+            src="/me/me-code.webp"
           />
         </Col>
 

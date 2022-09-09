@@ -12,34 +12,36 @@ import {
   StyleLinks
 } from './style';
 import useTranslation from 'hooks/useTransalation';
+import links from 'components/Molecules/MenuNav/links';
 
 type MenuNavProps = BaseComponent & {
   onToggle?: () => void;
+  activeKey: string;
 };
 
-export const Menu = ({ onToggle, ...props }: MenuNavProps) => {
+export const Menu = ({ onToggle, activeKey, ...props }: MenuNavProps) => {
   const { t } = useTranslation();
   return (
     <StyleMenuNav {...props}>
       <StyleBrand fontSize="2.2rem" className="brand-top" />
 
-      <Link href="/" passHref>
-        <StyleLink onClick={onToggle}>{t('navbar.home', 'Inicio')}</StyleLink>
-      </Link>
-      <Link href="#tech" passHref>
-        <StyleLink onClick={onToggle}>{t('navbar.technologies', 'Tecnologías')}</StyleLink>
-      </Link>
-
-      <StyleBrand className="brand-center" />
-
-      <Link href="#experience" passHref>
-        <StyleLink onClick={onToggle}>{t('navbar.experience', 'Experiencia')}</StyleLink>
-      </Link>
-      <Link href="#contact" passHref>
-        <StyleLink onClick={onToggle} color="white" className="contact-me">
-          {t('navbar.contact', 'Contacto')}
-        </StyleLink>
-      </Link>
+      {links(t).map((item) => {
+        if (item.type === 'brand') {
+          return <StyleBrand key={item.key} className="brand-center" />;
+        }
+        return (
+          <Link key={item.key} href={item.href as string} passHref>
+            <StyleLink
+              onClick={onToggle}
+              color={item?.color}
+              className={item?.className}
+              $active={activeKey === item.href}
+            >
+              {item.label}
+            </StyleLink>
+          </Link>
+        );
+      })}
 
       <StyleLinks>
         <SocialLinks />
@@ -48,10 +50,10 @@ export const Menu = ({ onToggle, ...props }: MenuNavProps) => {
   );
 };
 
-const MenuNav = ({ onToggle, ...props }: MenuNavProps) => {
+const MenuNav = ({ onToggle, activeKey, ...props }: MenuNavProps) => {
   return (
     <StyleWrapper {...props}>
-      <Menu onToggle={onToggle} className="only-desk" />
+      <Menu activeKey={activeKey} onToggle={onToggle} className="only-desk" />
 
       <Brand fontSize="2rem" className="only-mobile" />
 

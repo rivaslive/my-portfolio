@@ -3,8 +3,8 @@ import Title from 'components/Atoms/Title';
 import { Col, Row } from 'components/Atoms/Grid';
 import useTranslation from 'hooks/useTransalation';
 import SkillCard from 'components/Molecules/SkillCard';
-import { DataTecnhologies } from 'components/Organisms/Technologies/data';
 
+import { DataTechnologies } from './data';
 import { StyleContainer } from './style';
 
 const Technologies = (props: BaseComponent) => {
@@ -33,7 +33,7 @@ const Technologies = (props: BaseComponent) => {
       </Text>
 
       <Row justify="center" gutter={[20, 20]} style={{ marginTop: 50 }}>
-        {DataTecnhologies.map(({ title, image, key }) => {
+        {DataTechnologies.map(({ title, image, key }) => {
           return (
             <Col xs={24} md={12} lg={8} xl={6} key={key}>
               <SkillCard title={title} image={image} />

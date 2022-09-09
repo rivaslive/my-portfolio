@@ -1,4 +1,5 @@
-import { useCycle } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { CloseCircleOutlined } from '@ant-design/icons';
 
 import MenuNav from 'components/Molecules/MenuNav';
@@ -14,34 +15,48 @@ type NavbarProps = BaseComponent & {
   isScrolling?: boolean;
 };
 
-const variants = {
-  open: {
-    display: 'block',
-    translateX: 0
-  },
-  closed: {
-    display: 'none',
-    translateX: 250,
-  }
-};
+let ref: any;
 
 const Navbar = ({ isScrolling, ...props }: NavbarProps) => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const router = useRouter();
+  const [activeKey, setActiveKey] = useState('/');
+  const [isOpen, setOpen] = useState(false);
+  const [isOpenDelay, setOpenDelay] = useState(false);
 
-  const onToggleNav = () => toggleOpen();
+  const onToggleNav = () => {
+    setOpen((prev) => {
+      clearTimeout(ref);
+      const newPrev = !prev;
+
+      if (!newPrev) {
+        ref = setTimeout(() => {
+          setOpenDelay(newPrev);
+        }, 300);
+      } else {
+        setOpenDelay(newPrev);
+      }
+
+      return newPrev;
+    });
+  };
+
+  useEffect(() => {
+    if (router?.asPath) {
+      const splitPath = router.asPath.split('/');
+      const lastSplit = splitPath.at(-1);
+      setActiveKey(`/${lastSplit}`);
+    }
+  }, [router?.asPath]);
 
   return (
     <NavbarNav>
-      <NavbarWrapper $isScrolling={isScrolling} {...props}>
-        <MenuNav onToggle={onToggleNav} />
+      <NavbarWrapper size="large" $isScrolling={isScrolling} {...props}>
+        <MenuNav activeKey={activeKey} onToggle={onToggleNav} />
       </NavbarWrapper>
 
-      <MenuModalNav
-        initial={false}
-        animate={isOpen ? 'open' : 'closed'}
-      >
-        <MenuModal variants={variants}>
-          <Menu onToggle={onToggleNav} />
+      <MenuModalNav $variant={isOpenDelay ? 'open' : 'closed'}>
+        <MenuModal className={isOpen ? 'fadeInRight' : 'fadeOutRight'}>
+          <Menu activeKey={activeKey} onToggle={onToggleNav} />
           <CloseButton onClick={onToggleNav} bgColor="transparent">
             <CloseCircleOutlined />
           </CloseButton>

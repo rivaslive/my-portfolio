@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { getStyleResponsive } from './Config';
+import { getStyleResponsive, Size } from './Config';
 
-export const StyleContainer = styled.div`
+export const StyleContainer = styled.div<{ $size: Size }>`
   display: block;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0 auto;
 
-  ${getStyleResponsive()}
+  ${({ $size }) => getStyleResponsive({ size: $size })}
 `;

@@ -7,7 +7,7 @@ export const SkillCardContainer = styled.div`
   align-items: center;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  //cursor: pointer;
   background: ${({ theme }) => theme.colors.bgCard};
 
   &:hover {

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Title from 'components/Atoms/Title';
 import { mediaQueries } from 'styles/theme';
+import Image from 'components/Atoms/Image';
 
-export const StyleBrand = styled(Title)`
+export const StyleBrand = styled(Image)`
   font-family: 'Rock Salt', cursive;
   margin: 0;
 

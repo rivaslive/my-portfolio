@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { mediaQueries } from 'styles/theme';
 import Brand from 'components/Atoms/Brand';
 import Button from 'components/Atoms/Button';
-import { motion } from 'framer-motion';
 
 export const StyleWrapper = styled.div`
   position: relative;
@@ -43,17 +42,6 @@ export const StyleMenuNav = styled.div`
   }
 `;
 
-export const StyleMenuMobileNav = styled(motion.ul)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  ${mediaQueries.tablet} {
-    flex-direction: row;
-  }
-`;
-
 export const StyleLinks = styled.div`
   display: flex;
   align-items: center;
@@ -67,16 +55,19 @@ export const StyleLinks = styled.div`
   }
 `;
 
-export const StyleLink = styled.a`
+export const StyleLink = styled.a<{ $active?: boolean }>`
   margin: 5px;
   padding: 5px 15px;
   cursor: pointer;
   border-radius: 20px;
   font-weight: 600;
-  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  border: 1px solid transparent;
+  transition: border 0.2s ease-in-out;
+
+  ${({ theme, $active }) => $active && `border-color: ${theme.colors.text}`};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primaryOpacity};
+    border-color: ${({ theme }) => theme.colors.text};
   }
 
   &.contact-me {
@@ -124,9 +115,7 @@ export const CloseButton = styled(MenuBurger)`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-export const MenuModalNav = styled(motion.nav)``;
-
-export const MenuModal = styled(motion.div)`
+export const MenuModal = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -140,5 +129,56 @@ export const MenuModal = styled(motion.div)`
 
   ${mediaQueries.tablet} {
     display: none !important;
+  }
+`;
+
+type VariantType = 'open' | 'closed';
+
+const animation = {
+  open: keyframes`
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  `,
+  closed: keyframes`
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  `
+};
+
+const variants = {
+  open: css`
+    display: block;
+  `,
+  closed: css`
+    display: none;
+  `
+};
+
+export const MenuModalNav = styled.nav<{
+  $variant: VariantType;
+}>`
+  .fadeInRight {
+    animation: 300ms ${animation.open};
+  }
+
+  .fadeOutRight {
+    animation: 300ms ${animation.closed};
+  }
+
+  ${MenuModal} {
+    ${({ $variant }) => variants[$variant]}
   }
 `;

@@ -8,6 +8,22 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+const metaInfo = {
+  url: 'https://kevin-rivas.com',
+  author: 'Kevin Rivas',
+  description:
+    'Soy Kevin Rivas ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native.',
+  imgs: {
+    shared: 'https://kevin-rivas.com/shared.png',
+    favicon: '/favicon.ico',
+    favicon16: '/favicon-16x16.png',
+    favicon32: '/favicon-32x32.png',
+    favicon192: '/android-chrome-192x192.png',
+    favicon512: '/android-chrome-512x512.png',
+    faviconApple: '/apple-touch-icon.png',
+  }
+};
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     // Step 1: Create an instance of ServerStyleSheet
@@ -40,73 +56,80 @@ class MyDocument extends Document {
       <Html lang="es">
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
-          />
 
           {/* default preferences */}
-          <meta name="author" content="Kevin Rivas" />
-          <meta property="title" content="Kevin Rivas" />
+          <meta name="author" content={metaInfo.author} />
+          <meta property="title" content={metaInfo.author} />
           <meta property="type" content="profile" />
-          <meta property="site_name" content="Kevin Rivas" />
+          <meta property="site_name" content={metaInfo.author} />
           <meta
             property="description"
-            content="Soy Kevin Rivas ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+            content={metaInfo.description}
           />
-          <meta title="image" content="https://kevin-rivas.com/shared.png" />
+          <meta title="image" content={metaInfo.imgs.shared} />
 
           {/* Open Graph preferences */}
-          <meta name="og:author" content="Kevin Rivas" />
+          <meta name="og:author" content={metaInfo.author} />
           <meta property="og:type" content="profile" />
-          <meta property="og:site_name" content="Kevin Rivas" />
-          <meta property="og:url" content="https://kevin-rivas.com" />
-          <meta property="og:title" content="Kevin Rivas" />
-          <meta property="og:image" content="https://kevin-rivas.com/shared.png" />
+          <meta property="og:site_name" content={metaInfo.author} />
+          <meta property="og:url" content={metaInfo.url} />
+          <meta property="og:title" content={metaInfo.author} />
+          <meta
+            property="og:image"
+            content={metaInfo.imgs.shared}
+          />
           <meta
             property="og:description"
-            content="Soy Kevin Rivas ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+            content={metaInfo.description}
           />
 
           {/* Twitter */}
-          <meta name="twitter:author" content="Kevin Rivas" />
+          <meta name="twitter:author" content={metaInfo.author} />
           <meta property="twitter:type" content="profile" />
-          <meta property="twitter:site_name" content="Kevin Rivas" />
+          <meta property="twitter:site_name" content={metaInfo.author} />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="twitter:url"
-            content="https://kevin-rivas.com"
-          />
-          <meta property="twitter:title" content="Kevin Rivas" />
+          <meta property="twitter:url" content={metaInfo.url} />
+          <meta property="twitter:title" content={metaInfo.author} />
           <meta
             property="twitter:description"
-            content="Soy Kevin Rivas ingeniero en Sistemas y Computación lo que me ha llevado a poder resolver problemas de la manera más eficiente, soy un programador enfocado 100% en JavaScript/TypeScript por lo que manejo el entorno full-stack Servidor y Cliente, usando Nodejs, Reactjs y React Native."
+            content={metaInfo.description}
           />
-          <meta property="twitter:image" content="https://kevin-rivas.com/shared.png" />
+          <meta
+            property="twitter:image"
+            content={metaInfo.imgs.shared}
+          />
 
           {/* Dropdown rendering engine order  */}
           <meta name="renderer" content="webkit|ie-comp|ie-stand" />
 
-          <meta name="msapplication-TileImage" content="/favicon.png" />
-
           {/* links canonical */}
-          <link rel="canonical" href="https://kevin-rivas.com" />
-          <link rel="alternate" type="application/json+oembed" href="https://kevin-rivas.com" />
+          <link rel="canonical" href={metaInfo.url} />
+          <link
+            rel="alternate"
+            type="application/json+oembed"
+            href={metaInfo.url}
+          />
 
           <link
             rel="apple-touch-icon-precomposed"
             sizes="128x128"
-            href="/favicon.png"
+            href={metaInfo.imgs.faviconApple}
           />
           <link
             rel="icon"
             type="image/png"
-            href="/favicon.png"
+            href={metaInfo.imgs.favicon192}
             sizes="128x128"
           />
           <link
             rel="icon"
-            href="https://kevin-rivas.com/favicon.png"
+            type="image/png"
+            href={metaInfo.imgs.favicon192}
+            sizes="192x192"
+          />
+          <link
+            rel="icon"
+            href={metaInfo.imgs.favicon}
             type="image/png"
           />
 

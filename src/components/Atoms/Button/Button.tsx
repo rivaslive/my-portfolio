@@ -11,6 +11,7 @@ type ButtonProps = BaseComponent & {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   rounded?: boolean;
+  title?: string;
   fontWeight?: FontWeightType;
   margin?: string;
   color?: ColorType;

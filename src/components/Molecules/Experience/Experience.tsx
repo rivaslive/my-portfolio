@@ -1,7 +1,7 @@
 import Text from 'components/Atoms/Text';
 import Image from 'components/Atoms/Image';
 
-import {StyleBadge, StyleContent, StyleWrapper} from './style';
+import { StyleBadge, StyleContent, StyleWrapper } from './style';
 
 type ExperienceProps = BaseComponent & {
   image: string;
@@ -36,7 +36,12 @@ const Experience = ({
 
         <ul>
           {tasks.map((task, index) => (
-            <Text color="secondaryText" htmlTag="li" key={index} fontSize="1rem">
+            <Text
+              color="secondaryText"
+              htmlTag="li"
+              key={index}
+              fontSize="1rem"
+            >
               {task}
             </Text>
           ))}

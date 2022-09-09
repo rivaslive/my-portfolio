@@ -3,6 +3,7 @@ import { mediaQueries } from 'styles/theme';
 import Image from 'components/Atoms/Image';
 
 export const StyleWrapper = styled.div`
+  position: relative;
   padding: 1rem 1rem 2rem;
   display: flex;
   align-items: center;
@@ -10,8 +11,8 @@ export const StyleWrapper = styled.div`
   border-radius: 50px;
   max-width: 650px;
   margin: 0 auto;
-  background: ${({ theme }) => theme.colors.bgCard};
   backdrop-filter: blur(54px);
+  background: ${({ theme }) => theme.colors.bgCard};
 
   img {
     border-radius: 12px;
@@ -28,8 +29,22 @@ export const StyleWrapper = styled.div`
   }
 `;
 
+export const StyleAnimation = styled.div`
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+`;
+
 export const StyleContent = styled.div`
   margin-left: 0;
+
+  .title-link:hover {
+    text-decoration: underline;
+  }
 
   ${mediaQueries.tablet} {
     margin-left: 30px;
@@ -46,23 +61,7 @@ export const StyleImage = styled(Image)`
   flex-shrink: 0;
 
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease 0s;
-    width: 100%;
-    height: 100%;
-  }
-
-  canvas {
-    position: absolute;
-    z-index: 0;
-    object-fit: cover;
     border-radius: 50px;
-
-    width: 100% !important;
-    height: 100% !important;
   }
 `;
 
