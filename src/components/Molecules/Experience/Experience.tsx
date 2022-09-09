@@ -21,7 +21,13 @@ const Experience = ({
 }: ExperienceProps) => {
   return (
     <StyleWrapper {...props}>
-      <Image alt="" src={image} width={100} height={100} />
+      <Image
+        alt=""
+        src={image}
+        width={100}
+        height={100}
+        style={{ width: 100, flexShrink: 0 }}
+      />
       <StyleContent>
         <Text fontWeight={800} fontSize="1.5rem">
           {brand} {time && <StyleBadge>{time}</StyleBadge>}

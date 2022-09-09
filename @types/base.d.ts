@@ -1,5 +1,7 @@
+type CSSProperties = import('react').CSSProperties;
+
 declare type BaseComponent = {
-  style?: any;
+  style?: CSSProperties;
   className?: string;
   id?: string;
 };
@@ -10,4 +12,8 @@ declare type FontWeightType = 'normal' | 'bold' | number | 'string';
 
 declare type FontStyleType = 'normal' | 'italic';
 
-declare type TextTransformType = 'none' | 'uppercase' | 'lowercase' | 'capitalize';
+declare type TextTransformType =
+  | 'none'
+  | 'uppercase'
+  | 'lowercase'
+  | 'capitalize';

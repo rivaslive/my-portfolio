@@ -39,7 +39,7 @@ export const StyleContent = styled.div`
   margin-left: 0;
 
   ${mediaQueries.tablet} {
-    margin-left: 10px;
+    margin-left: 30px;
   }
 `;
 

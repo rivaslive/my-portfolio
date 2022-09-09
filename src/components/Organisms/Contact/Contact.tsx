@@ -13,7 +13,7 @@ const Contact = (props: ContactProps) => {
         <Col xs={24} md={12}>
           <StyleImage
             alt="kevin rivas"
-            width="100%"
+            width={435}
             height={400}
             src="/me/me-code.webp"
           />
