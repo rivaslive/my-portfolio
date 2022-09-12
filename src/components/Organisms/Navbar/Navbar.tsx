@@ -42,9 +42,9 @@ const Navbar = ({ isScrolling, ...props }: NavbarProps) => {
 
   useEffect(() => {
     if (router?.asPath) {
-      const splitPath = router.asPath.split('/');
-      const lastSplit = splitPath.at(-1);
-      setActiveKey(`/${lastSplit}`);
+      const splitPath = router?.asPath?.split('/');
+      const lastSplit = splitPath?.at(-1);
+      setActiveKey(`/${lastSplit ?? ''}`);
     }
   }, [router?.asPath]);
 
