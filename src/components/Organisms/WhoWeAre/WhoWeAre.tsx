@@ -54,12 +54,6 @@ const WhoWeAre = (props: WhoWeAreProps) => {
 
       <Text margin="30px 0 0" fontSize="1.2rem">
         {t('description1')}
-        <br />
-        <br />
-        {t('description2')}
-        <br />
-        <br />
-        {t('description3')}
       </Text>
     </Container>
   );
