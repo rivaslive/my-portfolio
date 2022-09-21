@@ -11,11 +11,6 @@ export const StyleWrapper = styled.div`
   margin: 0 auto;
   background: ${({ theme }) => theme.colors.bgCard};
   backdrop-filter: blur(54px);
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 
   ul li {
     margin-left: 15px;

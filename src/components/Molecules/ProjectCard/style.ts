@@ -13,6 +13,11 @@ export const StyleWrapper = styled.div`
   margin: 0 auto;
   backdrop-filter: blur(54px);
   background: ${({ theme }) => theme.colors.bgCard};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   img {
     border-radius: 12px;
