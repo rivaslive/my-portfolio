@@ -3,6 +3,8 @@ const colorsLight = {
   secondary: '#ff9800',
   accent: '#9c27b0',
   error: '#f44336',
+  npm: '#C43534',
+  // npm2: '#9c4746',
   warning: '#ffeb3b',
   info: '#2196f3',
   success: '#4caf50',
@@ -23,6 +25,7 @@ const colorsLight = {
   primaryOpacity: '#075dc0',
   accentOpacity: '#5b2464',
   primaryGradient: 'linear-gradient(to right, #1e40af, #00a2ff)',
+  npmGradient: 'linear-gradient(to right, #9c4746, #C43534)',
   accentGradient: 'linear-gradient(to right, #762f82, #da00ff)'
 };
 

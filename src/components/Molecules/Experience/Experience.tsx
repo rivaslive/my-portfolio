@@ -30,14 +30,19 @@ const Experience = ({
       />
       <StyleContent>
         <Text fontWeight={800} fontSize="1.5rem">
-          {brand} {time && <StyleBadge>{time}</StyleBadge>}
+          {brand}
         </Text>
+        {time && (
+          <Text fontWeight={800} fontSize="1rem" margin="0 0 20px">
+            <StyleBadge>{time}</StyleBadge>
+          </Text>
+        )}
         <Text color="secondaryText" fontSize="1rem">
           {description}
         </Text>
 
         <Text margin="20px 0 0" fontWeight={800} fontSize="1rem">
-          Task:
+          Tareas:
         </Text>
 
         <ul>

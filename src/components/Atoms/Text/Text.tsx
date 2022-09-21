@@ -15,7 +15,7 @@ type TextProps = BaseComponent & {
   lineHeight?: string;
   color?: ColorType;
   align?: AlignType;
-  htmlTag?: 'p' | 'span' | 'div' | 'li';
+  htmlTag?: 'p' | 'span' | 'div' | 'li' | 'code';
   mobileSettings?: {
     fontSize?: string;
     lineHeight?: string;

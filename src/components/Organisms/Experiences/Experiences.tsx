@@ -19,7 +19,7 @@ const Experiences = (props: BaseComponent) => {
           lineHeight: '3.2rem'
         }}
       >
-        {t('experience', 'Experiencia de')}{' '}
+        {t('experience', 'Experiencia')}{' '}
         <Title
           htmlTag="span"
           fontSize="5rem"
@@ -30,7 +30,7 @@ const Experiences = (props: BaseComponent) => {
             lineHeight: '3.2rem'
           }}
         >
-          {t('work', 'Trabajo')}
+          {t('work', 'Laboral')}
         </Title>
       </Title>
 

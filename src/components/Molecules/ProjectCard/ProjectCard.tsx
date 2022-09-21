@@ -45,7 +45,7 @@ const ProjectCard = ({
           </Text>
 
           <Text margin="20px 0 0" fontWeight={800} fontSize="1rem">
-            Task:
+            Tecnologías:
           </Text>
 
           {techs.map((tech, index) => (
