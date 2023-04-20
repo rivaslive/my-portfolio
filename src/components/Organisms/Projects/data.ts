@@ -1,14 +1,14 @@
 export const DataProjects = (t: any) => [
   {
     key: 'beauty-design',
-    name: 'React Native Beauty Design',
+    name: '@redshank/native',
     description: t(
       'projects_all.project1',
       'Lib de componentes para React Native, publicada en NPM.'
     ),
     image: '/projects/beauty-design1.webp',
     imageHover: '/projects/beauty-design2.webp',
-    link: 'https://www.beauty-design.app/',
+    link: 'https://www.redshank.app/',
     techs: ['Typescript', 'React Native', 'Nextjs']
   },
   {

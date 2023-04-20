@@ -17,13 +17,13 @@ const NpmProjects = (props: BaseComponent) => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.beauty-design.app"
+        href="https://www.redshank.app"
       >
         <StyleNpm>
           <Image src="/npm.svg" width="125px" height="100px" alt="npm" />
           <StyleNpmContent>
             <Text fontWeight={800} fontSize="1.2rem">
-              react-native-beauty-design
+              @redshank/native
             </Text>
             <Text>
               La mejor libreria de componentes UI para React Native. Con 26

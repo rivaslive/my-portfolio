@@ -1,7 +1,23 @@
 export const DataExperiences = (t: any) => [
   {
+    key: 'membrane',
+    time: t('experiences.experience0.date', '10/2022 - Actualmente'),
+    brand: 'Sr. Frontend Developer en Membranelabs',
+    image: '/experience/membrane.svg',
+    tasks: [
+      'Análisis de entregas en próximos sprints.',
+      'Integración de Features definidos en los sprints con Reactjs, Nodejs y Webpack.',
+      'Resolución de Bugs en Staging y Production.',
+      'Revisión y análisis de código.'
+    ],
+    description: t(
+      'experiences.experience0.description',
+      'Membranelabs es un administrador de portfolio financiero dirigido a Web3.'
+    )
+  },
+  {
     key: 'scotiabank',
-    time: t('experiences.experience1.date', '06/2022 - Actualmente'),
+    time: t('experiences.experience1.date', '06/2022 - 11/2022'),
     brand: 'Sr. FullStack Developer en Scotiabank Costa Rica',
     image: '/experience/scotiabank.webp',
     tasks: [
