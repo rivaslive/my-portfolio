@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import { useForm } from 'rc-field-form';
 
 import Form from 'components/Atoms/Form';
@@ -13,6 +13,8 @@ import useTranslation from 'hooks/useTransalation';
 import animation from '../../../../public/animations/successful.json';
 
 import { StyleSuccess } from './style';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const options = {
   animationData: animation,

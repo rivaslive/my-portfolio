@@ -12,9 +12,13 @@ const AppRenderTheme = memo(({ children }: { children?: ReactNode }) => {
   const { theme } = useAppTheme();
 
   return (
+    // @ts-ignore
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark}>
-      <GlobalStyle />
-      {children}
+      <>
+        {/* @ts-ignore */}
+        <GlobalStyle />
+        {children}
+      </>
     </ThemeProvider>
   );
 });

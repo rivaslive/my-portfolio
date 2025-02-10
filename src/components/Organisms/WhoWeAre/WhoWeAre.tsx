@@ -1,10 +1,12 @@
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import Text from 'components/Atoms/Text';
 import Title from 'components/Atoms/Title';
 import useTranslation from 'hooks/useTransalation';
 import Container from 'components/Atoms/Container';
 
 import animation from '@public/animations/animation4.json';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const options = {
   animationData: animation,

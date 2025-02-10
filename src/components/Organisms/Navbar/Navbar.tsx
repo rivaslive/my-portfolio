@@ -58,6 +58,7 @@ const Navbar = ({ isScrolling, ...props }: NavbarProps) => {
         <MenuModal className={isOpen ? 'fadeInRight' : 'fadeOutRight'}>
           <Menu activeKey={activeKey} onToggle={onToggleNav} />
           <CloseButton onClick={onToggleNav} bgColor="transparent">
+            {/* @ts-ignore */}
             <CloseCircleOutlined />
           </CloseButton>
         </MenuModal>

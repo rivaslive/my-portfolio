@@ -17,16 +17,18 @@ const Layout = ({ children, ...props }: LayoutProps) => {
 
   return (
     <LayoutWrapper {...props}>
-      {!loading && <Navbar isScrolling={detached} />}
-      {children}
+      <>
+        {!loading && <Navbar isScrolling={detached} />}
+        {children}
 
-      <div style={{ height: 100 }} />
-      <FooterWrapper>
-        <FooterBody>
-          <Brand />
-          <SocialLinks withoutTheme />
-        </FooterBody>
-      </FooterWrapper>
+        <div style={{ height: 100 }} />
+        <FooterWrapper>
+          <FooterBody>
+            <Brand />
+            <SocialLinks withoutTheme />
+          </FooterBody>
+        </FooterWrapper>
+      </>
     </LayoutWrapper>
   );
 };

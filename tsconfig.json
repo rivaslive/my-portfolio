@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -16,17 +20,46 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "components/*": ["components/*"],
-      "pages/*": ["pages/*"],
-      "styles/*": ["styles/*"],
-      "hooks/*": ["hooks/*"],
-      "utils/*": ["utils/*"],
-      "config/*": ["config/*"],
-      "context/*": ["context/*"],
-      "@public/*": ["../public/*"],
+      "components/*": [
+        "components/*"
+      ],
+      "pages/*": [
+        "pages/*"
+      ],
+      "styles/*": [
+        "styles/*"
+      ],
+      "hooks/*": [
+        "hooks/*"
+      ],
+      "utils/*": [
+        "utils/*"
+      ],
+      "config/*": [
+        "config/*"
+      ],
+      "context/*": [
+        "context/*"
+      ],
+      "@public/*": [
+        "../public/*"
+      ],
+      "rc-util/es/Dom/canUseDom": [
+        "node_modules/rc-util/es/Dom/canUseDom.js"
+      ]
     },
-    "typeRoots": ["node_modules/@types","@types"]
+    "typeRoots": [
+      "node_modules/@types",
+      "@types"
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "@types"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "@types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

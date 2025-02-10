@@ -57,7 +57,7 @@ const Title = ({
       $mobileSettings={mobileSettings}
       {...restProps}
     >
-      {children}
+      <>{children}</>
     </TitleStyle>
   );
 };

@@ -57,7 +57,7 @@ const Text = ({
       $mobileSettings={mobileSettings}
       {...restProps}
     >
-      {children}
+      <>{children}</>
     </TextStyle>
   );
 };

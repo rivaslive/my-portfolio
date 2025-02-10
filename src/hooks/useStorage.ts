@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { useCallback, useMemo } from 'react';
 
 type TypeSessionType = 'local' | 'session';

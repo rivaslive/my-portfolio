@@ -1,7 +1,6 @@
-import { forwardRef } from 'react';
-import NextImage from 'next/image';
-import { StaticImageData } from 'next/dist/client/image';
-import { StyleImage } from './style';
+import {forwardRef} from 'react';
+import NextImage, {StaticImageData} from 'next/image';
+import {StyleImage} from './style';
 
 interface StaticRequire {
   default: StaticImageData;
@@ -10,7 +9,7 @@ interface StaticRequire {
 declare type StaticImport = StaticRequire | StaticImageData;
 
 type ImageProps = BaseComponent & {
-  src: string | StaticImport;
+  src: string;
   alt?: string;
   width?: string | number;
   quality?: number;
@@ -37,12 +36,14 @@ const Image = forwardRef<HTMLDivElement, ImageProps>(
     return (
       <StyleImage ref={_ref} id={id} className={className} style={style}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <NextImage
+        <img
           alt={alt}
           src={src}
           width={width}
           height={height}
-          objectFit={objectFit}
+          style={objectFit ? {
+            objectFit,
+          } : {}}
           {...rest}
         />
       </StyleImage>

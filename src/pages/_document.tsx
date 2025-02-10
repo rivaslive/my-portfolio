@@ -20,7 +20,7 @@ const metaInfo = {
     favicon32: '/favicon-32x32.png',
     favicon192: '/android-chrome-192x192.png',
     favicon512: '/android-chrome-512x512.png',
-    faviconApple: '/apple-touch-icon.png',
+    faviconApple: '/apple-touch-icon.png'
   }
 };
 
@@ -34,6 +34,7 @@ class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
+            // @ts-ignore
             sheet.collectStyles(<App {...props} />)
         });
       const initialProps = await Document.getInitialProps(ctx);
@@ -62,10 +63,7 @@ class MyDocument extends Document {
           <meta property="title" content={metaInfo.author} />
           <meta property="type" content="profile" />
           <meta property="site_name" content={metaInfo.author} />
-          <meta
-            property="description"
-            content={metaInfo.description}
-          />
+          <meta property="description" content={metaInfo.description} />
           <meta title="image" content={metaInfo.imgs.shared} />
 
           {/* Open Graph preferences */}
@@ -74,14 +72,8 @@ class MyDocument extends Document {
           <meta property="og:site_name" content={metaInfo.author} />
           <meta property="og:url" content={metaInfo.url} />
           <meta property="og:title" content={metaInfo.author} />
-          <meta
-            property="og:image"
-            content={metaInfo.imgs.shared}
-          />
-          <meta
-            property="og:description"
-            content={metaInfo.description}
-          />
+          <meta property="og:image" content={metaInfo.imgs.shared} />
+          <meta property="og:description" content={metaInfo.description} />
 
           {/* Twitter */}
           <meta name="twitter:author" content={metaInfo.author} />
@@ -90,14 +82,8 @@ class MyDocument extends Document {
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content={metaInfo.url} />
           <meta property="twitter:title" content={metaInfo.author} />
-          <meta
-            property="twitter:description"
-            content={metaInfo.description}
-          />
-          <meta
-            property="twitter:image"
-            content={metaInfo.imgs.shared}
-          />
+          <meta property="twitter:description" content={metaInfo.description} />
+          <meta property="twitter:image" content={metaInfo.imgs.shared} />
 
           {/* Dropdown rendering engine order  */}
           <meta name="renderer" content="webkit|ie-comp|ie-stand" />
@@ -127,17 +113,13 @@ class MyDocument extends Document {
             href={metaInfo.imgs.favicon192}
             sizes="192x192"
           />
-          <link
-            rel="icon"
-            href={metaInfo.imgs.favicon}
-            type="image/png"
-          />
+          <link rel="icon" href={metaInfo.imgs.favicon} type="image/png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
-            crossOrigin="true"
+            crossOrigin=""
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"

@@ -1,4 +1,16 @@
 export const DataProjects = (t: any) => [
+  // {
+  //   key: 'jogo-app',
+  //   name: 'Jogo App Platform',
+  //   description: t(
+  //     'projects_all.project4',
+  //     'Jogo es una aplicación diseñada para darte una experiencia más fácil al momento de administrar a tus clientes, gestionar sus reservas, y mejorar su comunicación.'
+  //   ),
+  //   image: 'https://app.getjogo.com/icon-app.png',
+  //   imageHover: '/projects/beauty-design2.webp',
+  //   link: 'https://getjogo.com/',
+  //   techs: ['Typescript', 'React Native', 'Nextjs']
+  // },
   {
     key: 'beauty-design',
     name: '@redshank/native',

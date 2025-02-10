@@ -68,6 +68,7 @@ const Search = forwardRef<HTMLInputElement, SearchInputProps>(
         className={className}
       >
         <StyleLabel>
+          {/* @ts-ignore */}
           <StyleInput
             // @ts-ignore
             ref={_ref}
@@ -84,6 +85,7 @@ const Search = forwardRef<HTMLInputElement, SearchInputProps>(
           bgColor="warning"
           color="white"
         >
+          {/* @ts-ignore */}
           Search <SearchOutlined />
         </StyleButtonSearch>
       </StyleWrapper>

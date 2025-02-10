@@ -1,5 +1,8 @@
 import * as React from 'react';
-import canUseDom from 'rc-util/lib/Dom/canUseDom';
+
+function canUseDom() {
+  return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+}
 
 const canUseDocElement = () => canUseDom() && window.document.documentElement;
 

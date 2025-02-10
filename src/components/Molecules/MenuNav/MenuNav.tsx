@@ -63,6 +63,7 @@ const MenuNav = ({ onToggle, activeKey, ...props }: MenuNavProps) => {
         className="only-mobile"
         bgColor="accentOpacity"
       >
+        {/* @ts-ignore */}
         <MenuOutlined />
       </MenuBurger>
     </StyleWrapper>

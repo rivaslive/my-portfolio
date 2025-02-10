@@ -41,6 +41,7 @@ const RenderCV = (props: RenderCVProps) => {
 
   return (
     <WrapperStyle {...props}>
+      {/* @ts-ignore */}
       <Document
         file={`.${cvPath}`}
         options={pdfOptions}
@@ -48,6 +49,7 @@ const RenderCV = (props: RenderCVProps) => {
           <img alt="Preview" className="preview-img" src={previewBase64} />
         }
       >
+        {/* @ts-ignore */}
         <Page pageNumber={1} pageIndex={0} />
       </Document>
       <Row justify="center" gutter={20}>
@@ -57,6 +59,7 @@ const RenderCV = (props: RenderCVProps) => {
             margin="20px auto 0"
             onClick={onDownloadCompleteCv}
           >
+            {/* @ts-ignore */}
             <CloudDownloadOutlined style={{ marginRight: 5, fontSize: 18 }} />{' '}
             Curriculum Completo
           </Button>
@@ -68,6 +71,7 @@ const RenderCV = (props: RenderCVProps) => {
             margin="20px auto 0"
             onClick={onDownloadCv}
           >
+            {/* @ts-ignore */}
             <DownloadOutlined style={{ marginRight: 5, fontSize: 18 }} />{' '}
             Curriculum Minimo
           </Button>

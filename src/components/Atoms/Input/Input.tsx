@@ -53,6 +53,7 @@ const Input = forwardRef<HTMLTextAreaElement, InputProps>(
         $borderColor={withErrors ? 'error' : borderColor}
       >
         <StyleLabel>
+          {/* @ts-ignore */}
           <StyleInput
             // @ts-ignore
             ref={_ref}

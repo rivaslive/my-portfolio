@@ -25,8 +25,14 @@ const Item = ({
 
   return (
     <StyleMenuItem onClick={clickMenu} {...rest}>
-      {icon && <StyleIcon>{icon}</StyleIcon>}
-      {children}
+      <>
+        {icon && (
+          <StyleIcon>
+            <>{icon}</>
+          </StyleIcon>
+        )}
+        {children}
+      </>
     </StyleMenuItem>
   );
 };

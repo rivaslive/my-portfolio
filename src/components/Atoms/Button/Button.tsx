@@ -1,9 +1,9 @@
-import { ReactNode, MouseEvent } from 'react';
+import {ReactNode, MouseEvent} from 'react';
 
 import Loading from 'components/Atoms/Loading';
-import { ColorType } from 'styles/theme';
+import {ColorType} from 'styles/theme';
 
-import { VariantType, ButtonStyle } from './style';
+import {VariantType, ButtonStyle} from './style';
 
 type ButtonProps = BaseComponent & {
   children?: ReactNode;
@@ -22,21 +22,21 @@ type ButtonProps = BaseComponent & {
 };
 
 const Button = ({
-  children,
-  type,
-  onClick,
-  disabled,
-  className,
-  loading = false,
-  rounded = false,
-  variant = 'default', // default | link
-  fontWeight = 'bold',
-  margin = 'initial',
-  color = variant === 'link' ? 'primary' : 'white',
-  bgColor = variant === 'link' ? 'transparent' : 'primary',
-  borderColor = 'transparent',
-  ...restProps
-}: ButtonProps) => {
+                  children,
+                  type,
+                  onClick,
+                  disabled,
+                  className,
+                  loading = false,
+                  rounded = false,
+                  variant = 'default', // default | link
+                  fontWeight = 'bold',
+                  margin = 'initial',
+                  color = variant === 'link' ? 'primary' : 'white',
+                  bgColor = variant === 'link' ? 'transparent' : 'primary',
+                  borderColor = 'transparent',
+                  ...restProps
+                }: ButtonProps) => {
   return (
     <ButtonStyle
       type={type}
@@ -53,8 +53,9 @@ const Button = ({
       className={`btn ${className}`}
       {...restProps}
     >
-      {loading && <Loading size="1.2rem" right={7} />}
-      {children}
+      <>
+        {loading && <Loading size="1.2rem" right={7}/>}
+        {children}</>
     </ButtonStyle>
   );
 };

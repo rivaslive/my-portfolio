@@ -17,8 +17,14 @@ function Container({
   ...rest
 }: ContainerProps) {
   return (
-    <StyleContainer id={id} className={className} style={style} $size={size} {...rest}>
-      {children}
+    <StyleContainer
+      id={id}
+      className={className}
+      style={style}
+      $size={size}
+      {...rest}
+    >
+      <>{children}</>
     </StyleContainer>
   );
 }

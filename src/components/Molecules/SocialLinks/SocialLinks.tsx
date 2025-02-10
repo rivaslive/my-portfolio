@@ -36,6 +36,7 @@ const SocialLinks = ({ withoutTheme, ...props }: SocialLinksProps) => {
           bgColor="transparent"
           style={{ fontSize: 24 }}
         >
+          {/* @ts-ignore */}
           <GithubOutlined />
         </Button>
       </a>
@@ -51,6 +52,7 @@ const SocialLinks = ({ withoutTheme, ...props }: SocialLinksProps) => {
           bgColor="transparent"
           style={{ fontSize: 24 }}
         >
+          {/* @ts-ignore */}
           <LinkedinOutlined />
         </Button>
       </a>

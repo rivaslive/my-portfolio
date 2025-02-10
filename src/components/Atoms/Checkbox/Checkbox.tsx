@@ -52,14 +52,16 @@ const Checkbox = ({
       $fontSize={fontSize}
       $color={color}
     >
-      {children}
-      <StyleInputCheck
-        checked={checked}
-        onChange={onChangeChecked}
-        type="checkbox"
-        {...restProps}
-      />
-      <StyleCheckMark />
+      <>
+        {children}
+        <StyleInputCheck
+          checked={checked}
+          onChange={onChangeChecked}
+          type="checkbox"
+          {...restProps}
+        />
+        <StyleCheckMark />
+      </>
     </LabelStyle>
   );
 };

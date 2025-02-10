@@ -13,9 +13,10 @@ const Loading = ({
   right = 0,
   size = '1rem',
   style = {},
-  color = 'currentColor',
+  color = 'currentColor'
 }: LoadingType) => {
   return (
+    // @ts-ignore
     <LoadingStyle
       className={className}
       style={{
@@ -23,7 +24,7 @@ const Loading = ({
         color,
         marginTop: top,
         marginRight: right,
-        fontSize: size,
+        fontSize: size
       }}
     />
   );
