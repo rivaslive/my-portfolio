@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accounting.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>CE674FC93AE5B612FF4C56D28758C081B2553B97</string>
+				<key>dateExpires</key>
+				<string>9/2/26</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>0.12.0</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CE674FC93AE5B612FF4C56D28758C081B2553B97</string>
+						<key>dateExpires</key>
+						<string>9/2/26</string>
+						<key>type</key>
+						<string>Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>hermes.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>7ZKP2AC4H6</string>
+						<key>name</key>
+						<string>Kevin Rivas</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>0.12.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>7ZKP2AC4H6.com.rivaslive.accounting</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>7ZKP2AC4H6</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>accounting.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>9aed6567-6928-40a7-9207-05fced42cf8a</string>
+				<key>dateExpires</key>
+				<string>9/2/26</string>
+				<key>name</key>
+				<string>Kevin Church 2</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>7ZKP2AC4H6</string>
+				<key>name</key>
+				<string>Kevin Rivas</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
